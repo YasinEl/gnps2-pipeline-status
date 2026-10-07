@@ -142,10 +142,10 @@
   <p class="lab">Repository → GNPS2 acquisition</p>
   <h1>GNPS2 Corpus Pipeline</h1>
   <p class="sub">Datasets flow repository → download → conversion → WCH staging server, and the mz(x)ML is deleted here once WCH confirms it. 3,319 datasets are in play, 238,679 files fetched so far.</p>
-  <p class="stamp">Snapshot 2026-10-07 09:12 -0700 · downloads: ALL PAUSED · scratch 90 GiB · conversion: STOPPED</p>
+  <p class="stamp">Snapshot 2026-10-07 09:42 -0700 · downloads: ALL PAUSED · scratch 90 GiB · conversion: STOPPED</p>
 </header>
 
-<div class="banner"><b>Downloads are stopped — every stream is refusing at the 5,120 GiB floor.</b> 5,248 GiB free leaves 128 GiB above the floor, less than the 200 GiB of slack a download needs, so all three streams walk their queues refusing each dataset; 2,159 datasets have nothing fetched. Conversion and the WCH hand-off are unaffected and still running. This does not clear by itself: <code>data-ready</code> moved to gscratch, so the drain frees nothing on this volume, and what is left here is vendor originals kept by policy.</div>
+<div class="banner"><b>Downloads are stopped — every stream is refusing at the 5,120 GiB floor.</b> 5,247 GiB free leaves 127 GiB above the floor, less than the 200 GiB of slack a download needs, so all three streams walk their queues refusing each dataset; 2,159 datasets have nothing fetched. Conversion and the WCH hand-off are unaffected and still running. This does not clear by itself: <code>data-ready</code> moved to gscratch, so the drain frees nothing on this volume, and what is left here is vendor originals kept by policy.</div>
 
 <section id="flow">
   <h2>Hand-off flow</h2>
@@ -234,7 +234,7 @@
     <div class="legend">
       <span><span class="swatch" style="background:var(--ink-3)"></span><b>16,427 GiB</b> used</span>
       <span><span class="swatch" style="background:var(--blocked)"></span><b>5,120 GiB</b> reserved floor</span>
-      <span><span class="swatch" style="background:var(--accent)"></span><b>128 GiB</b> above the floor — downloads need 200 GiB of this before they will start</span>
+      <span><span class="swatch" style="background:var(--accent)"></span><b>127 GiB</b> above the floor — downloads need 200 GiB of this before they will start</span>
     </div>
   </div>
 
