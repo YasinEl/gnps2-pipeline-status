@@ -142,10 +142,10 @@
   <p class="lab">Repository → GNPS2 acquisition</p>
   <h1>GNPS2 Corpus Pipeline</h1>
   <p class="sub">Datasets flow repository → download → conversion → WCH staging server, and the mz(x)ML is deleted here once WCH confirms it. 3,319 datasets are in play, 238,679 files fetched so far.</p>
-  <p class="stamp">Snapshot 2026-10-07 07:20 -0700 · downloads: MassIVE (at the floor), MetaboLights (at the floor), Workbench (at the floor) · scratch 89 GiB · conversion: running</p>
+  <p class="stamp">Snapshot 2026-10-07 07:42 -0700 · downloads: MassIVE (at the floor), MetaboLights (at the floor), Workbench (at the floor) · scratch 89 GiB · conversion: running</p>
 </header>
 
-<div class="banner"><b>Downloads are stopped — every stream is refusing at the 5,120 GiB floor.</b> 5,252 GiB free leaves 132 GiB above the floor, less than the 200 GiB of slack a download needs, so all three streams walk their queues refusing each dataset; 2,160 datasets have nothing fetched. Conversion and the WCH hand-off are unaffected and still running. This does not clear by itself: <code>data-ready</code> moved to gscratch, so the drain frees nothing on this volume, and what is left here is vendor originals kept by policy.</div>
+<div class="banner"><b>Downloads are stopped — every stream is refusing at the 5,120 GiB floor.</b> 5,251 GiB free leaves 131 GiB above the floor, less than the 200 GiB of slack a download needs, so all three streams walk their queues refusing each dataset; 2,159 datasets have nothing fetched. Conversion and the WCH hand-off are unaffected and still running. This does not clear by itself: <code>data-ready</code> moved to gscratch, so the drain frees nothing on this volume, and what is left here is vendor originals kept by policy.</div>
 
 <section id="flow">
   <h2>Hand-off flow</h2>
@@ -153,7 +153,7 @@
   <div class="grid">
     <div class="card"><span class="k">1,534</span><div class="t">datasets held locally · 15.3 TB</div>
       <div class="foot">vendor originals in <code>data-download</code>, kept by policy · measured 07:08</div></div>
-    <div class="card"><span class="k">3</span><div class="t">datasets converted, awaiting push · 2.0 GB</div>
+    <div class="card"><span class="k">3</span><div class="t">datasets converted, awaiting push · 2.2 GB</div>
       <div class="foot">31 files in <code>data-ready</code> on scratch, counted on disk</div></div>
     <div class="card is-ready"><span class="k">859</span><div class="t">datasets delivered to WCH</div>
       <div class="foot">219,911 files confirmed on the staging server</div></div>
@@ -213,8 +213,8 @@
 })();
 </script>
     <div class="legend">
-      <span><b>6.1 GiB</b> in the last hour</span>
-      <span><b>10</b> datasets · <b>71</b> files</span>
+      <span><b>3.3 GiB</b> in the last hour</span>
+      <span><b>9</b> datasets · <b>45</b> files</span>
       <span class="dim">hourly buckets · switch the y axis with the buttons above</span>
     </div>
   </div>
@@ -232,9 +232,9 @@
       <div class="avail" style="width:0.6%"></div>
     </div>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--ink-3)"></span><b>16,423 GiB</b> used</span>
+      <span><span class="swatch" style="background:var(--ink-3)"></span><b>16,424 GiB</b> used</span>
       <span><span class="swatch" style="background:var(--blocked)"></span><b>5,120 GiB</b> reserved floor</span>
-      <span><span class="swatch" style="background:var(--accent)"></span><b>132 GiB</b> above the floor — downloads need 200 GiB of this before they will start</span>
+      <span><span class="swatch" style="background:var(--accent)"></span><b>131 GiB</b> above the floor — downloads need 200 GiB of this before they will start</span>
     </div>
   </div>
 
@@ -261,10 +261,10 @@
     <span class="step">1</span>
     <div>
       <p class="stage-name">Not downloaded</p>
-      <p class="stage-desc">On the list to be downloaded; no bytes fetched yet. <strong>2,160 of these have a ledger row saying the stream reached them and refused at the free-space floor</strong> — they are queued, not forgotten, but nothing will be fetched until there is headroom.</p>
-      <div class="bar"><i style="width:65.1%"></i></div>
+      <p class="stage-desc">On the list to be downloaded; no bytes fetched yet. <strong>2,159 of these have a ledger row saying the stream reached them and refused at the free-space floor</strong> — they are queued, not forgotten, but nothing will be fetched until there is headroom.</p>
+      <div class="bar"><i style="width:65.0%"></i></div>
     </div>
-    <div class="count"><span class="k">2,160</span><span class="of">datasets · 65.1%</span></div>
+    <div class="count"><span class="k">2,159</span><span class="of">datasets · 65.0%</span></div>
     <div class="count"><span class="k">—</span><span class="of">files</span></div>
   </div>
 
@@ -273,9 +273,9 @@
     <div>
       <p class="stage-name">Downloading &amp; unpacking</p>
       <p class="stage-desc">Queued in the download streams, including datasets retrying after transient repository errors. Parked datasets, which are no longer retried, are listed separately below. The file count is what has landed for them so far. <strong>Nothing is being fetched right now:</strong> every stream is walking this queue refusing each dataset at the free-space floor.</p>
-      <div class="bar"><i style="width:1.6%"></i></div>
+      <div class="bar"><i style="width:1.7%"></i></div>
     </div>
-    <div class="count"><span class="k">54</span><span class="of">datasets · 1.6%</span></div>
+    <div class="count"><span class="k">55</span><span class="of">datasets · 1.7%</span></div>
     <div class="count"><span class="k">8,331</span><span class="of">files on disk</span></div>
   </div>
   <div class="after"><strong>Parked — 100 datasets the streams no longer retry.</strong> Not counted as downloading. Items marked <em>needs action</em> stay parked until someone intervenes.<ul style="margin:8px 0 0;padding-left:18px"><li><strong>29 · no file list; queued for manual handling</strong> <span class="pill p-blocked">needs action</span><br><code>ST003033</code> <span class="dim">since 2026-09-21</span>, <code>ST003494</code> <span class="dim">since 2026-09-21</span>, <code>ST003852</code> <span class="dim">since 2026-09-21</span>, <code>ST004050</code> <span class="dim">since 2026-09-21</span>, <code>ST004064</code> <span class="dim">since 2026-09-21</span>, <code>ST004069</code> <span class="dim">since 2026-09-21</span>, <code>ST004512</code> <span class="dim">since 2026-09-21</span>, <code>ST004636</code> <span class="dim">since 2026-09-21</span>, <code>ST004699</code> <span class="dim">since 2026-09-21</span>, <code>ST004772</code> <span class="dim">since 2026-09-21</span>, <code>ST004827</code> <span class="dim">since 2026-09-21</span>, <code>ST004842</code> <span class="dim">since 2026-09-21</span>, <code>ST004887</code> <span class="dim">since 2026-09-21</span>, <code>ST004893</code> <span class="dim">since 2026-09-21</span>, <code>ST004911</code> <span class="dim">since 2026-09-21</span>, <code>ST004914</code> <span class="dim">since 2026-09-21</span>, <code>ST004923</code> <span class="dim">since 2026-09-21</span>, <code>ST004929</code> <span class="dim">since 2026-09-21</span>, <code>ST004931</code> <span class="dim">since 2026-09-21</span>, <code>ST004943</code> <span class="dim">since 2026-09-21</span>, <code>ST004945</code> <span class="dim">since 2026-09-21</span>, <code>ST004946</code> <span class="dim">since 2026-09-21</span>, <code>ST005017</code> <span class="dim">since 2026-09-21</span>, <code>ST005045</code> <span class="dim">since 2026-09-21</span>, <code>ST005046</code> <span class="dim">since 2026-09-21</span>, <code>ST005052</code> <span class="dim">since 2026-09-21</span>, <code>ST005059</code> <span class="dim">since 2026-09-21</span>, <code>ST005066</code> <span class="dim">since 2026-09-21</span>, <code>ST005099</code> <span class="dim">since 2026-09-21</span></li><li><strong>55 · repository lists no files</strong> <span class="pill p-accent">not retried</span><br><code>MSV000098316</code>, <code>MSV000098655</code>, <code>MSV000098811</code>, <code>MSV000098924</code>, <code>MSV000099299</code>, <code>MSV000099575</code>, <code>MSV000100039</code>, <code>MSV000100374</code>, <code>MSV000100376</code>, <code>MSV000100549</code>, <code>MSV000100573</code>, <code>MSV000100694</code>, <code>MSV000100951</code>, <code>MSV000101042</code>, <code>MSV000101115</code>, <code>MSV000101258</code>, <code>MSV000101323</code>, <code>MSV000101458</code>, <code>MSV000101819</code>, <code>MSV000101943</code>, <code>MSV000102059</code>, <code>MSV000102079</code>, <code>MSV000102097</code>, <code>MSV000102134</code>, <code>MSV000102152</code>, <code>MSV000102165</code>, <code>MSV000102197</code>, <code>MSV000102204</code>, <code>MSV000102217</code>, <code>MSV000102223</code>, <code>MSV000102232</code>, <code>MSV000102239</code>, <code>MSV000102240</code>, <code>MSV000102266</code>, <code>MSV000102267</code>, <code>MSV000102269</code>, <code>MSV000102273</code>, <code>MSV000102295</code>, <code>MSV000102307</code>, <code>MSV000102336</code> and 15 more</li><li><strong>6 · not public on EBI</strong> <span class="pill p-accent">not retried</span><br><code>MTBLS10951</code>, <code>MTBLS12999</code>, <code>MTBLS13285</code>, <code>MTBLS13389</code>, <code>MTBLS14493</code>, <code>MTBLS14928</code></li><li><strong>9 · downloaded, but contains no MS acquisitions</strong> <span class="pill p-accent">not retried</span><br><code>MSV000098324</code>, <code>MSV000101131</code>, <code>MSV000101436</code>, <code>MSV000101488</code>, <code>ST000414</code>, <code>ST001180</code>, <code>ST001215</code>, <code>ST001237</code>, <code>ST001335</code></li><li><strong>1 · extraction held for manual review</strong> <span class="pill p-blocked">needs action</span><br><code>ST001889</code> <span class="dim">since 2026-09-21</span></li></ul></div>
@@ -332,11 +332,11 @@
         <tr><td>Named priority list <span class="pill p-ready">all delivered</span> <span class="dim">· 5 delivered earlier</span></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">0</td></tr>
         <tr><td>Named, injected 21 Aug <span class="pill p-ready">all delivered</span> <span class="dim">· 1 delivered earlier</span></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">0</td></tr>
         <tr><td>ReDU environmental <span class="dim">· 21 delivered earlier</span></td><td class="n">—</td><td class="n">—</td><td class="n">1</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">1</td></tr>
-        <tr><td>ReDU, other sample types <span class="dim">· 208 delivered earlier</span></td><td class="n">1</td><td class="n">52</td><td class="n">439</td><td class="n">33</td><td class="n">28</td><td class="n">1,530</td><td class="n">2,083</td></tr>
+        <tr><td>ReDU, other sample types <span class="dim">· 208 delivered earlier</span></td><td class="n">1</td><td class="n">52</td><td class="n">439</td><td class="n">34</td><td class="n">28</td><td class="n">1,529</td><td class="n">2,083</td></tr>
         <tr><td>Everything else <span class="dim">· 480 delivered earlier</span></td><td class="n">—</td><td class="n">51</td><td class="n">444</td><td class="n">21</td><td class="n">72</td><td class="n">629</td><td class="n">1,217</td></tr>
         <tr><td>Zip-only, spectral inside</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">1</td><td class="n">1</td></tr>
         <tr><td>Staged by earlier work</td><td class="n">—</td><td class="n">17</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">17</td></tr>
-        <tr class="total"><td>Total</td><td class="n">1</td><td class="n">120</td><td class="n">884</td><td class="n">54</td><td class="n">100</td><td class="n">2,160</td><td class="n">3,319</td></tr>
+        <tr class="total"><td>Total</td><td class="n">1</td><td class="n">120</td><td class="n">884</td><td class="n">55</td><td class="n">100</td><td class="n">2,159</td><td class="n">3,319</td></tr>
       </tbody>
     </table>
   </div>
@@ -351,8 +351,8 @@
       <tbody>
         <tr><td>MassIVE</td><td class="n">0</td><td class="n">25</td><td class="n">409</td><td class="n">7</td><td class="n">59</td><td class="n">0</td><td class="n">90,978</td></tr>
         <tr><td>Workbench</td><td class="n">0</td><td class="n">28</td><td class="n">195</td><td class="n">3</td><td class="n">35</td><td class="n">1,268</td><td class="n">85,958</td></tr>
-        <tr><td>MetaboLights</td><td class="n">1</td><td class="n">50</td><td class="n">280</td><td class="n">44</td><td class="n">6</td><td class="n">892</td><td class="n">61,743</td></tr>
-        <tr class="total"><td>Total</td><td class="n">1</td><td class="n">120</td><td class="n">884</td><td class="n">54</td><td class="n">100</td><td class="n">2,160</td><td class="n">238,679</td></tr>
+        <tr><td>MetaboLights</td><td class="n">1</td><td class="n">50</td><td class="n">280</td><td class="n">45</td><td class="n">6</td><td class="n">891</td><td class="n">61,743</td></tr>
+        <tr class="total"><td>Total</td><td class="n">1</td><td class="n">120</td><td class="n">884</td><td class="n">55</td><td class="n">100</td><td class="n">2,159</td><td class="n">238,679</td></tr>
       </tbody>
     </table>
   </div>
