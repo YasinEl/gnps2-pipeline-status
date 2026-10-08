@@ -142,7 +142,7 @@
   <p class="lab">Repository → GNPS2 acquisition</p>
   <h1>GNPS2 Corpus Pipeline</h1>
   <p class="sub">Datasets flow repository → download → conversion → WCH staging server, and the mz(x)ML is deleted here once WCH confirms it. 3,319 datasets are in play, 238,679 files fetched so far.</p>
-  <p class="stamp">Snapshot 2026-10-08 04:42 -0700 · downloads: ALL PAUSED · scratch 90 GiB · conversion: running</p>
+  <p class="stamp">Snapshot 2026-10-08 04:48 -0700 · downloads: ALL PAUSED · scratch 90 GiB · conversion: running</p>
 </header>
 
 <div class="banner"><b>Downloads are stopped — every stream is refusing at the 5,120 GiB floor.</b> 5,156 GiB free leaves 36 GiB above the floor, less than the 200 GiB of slack a download needs, so all three streams walk their queues refusing each dataset; 2,159 datasets have nothing fetched. Conversion and the WCH hand-off are unaffected and still running. This does not clear by itself: <code>data-ready</code> moved to gscratch, so the drain frees nothing on this volume, and what is left here is vendor originals kept by policy.</div>
@@ -153,7 +153,7 @@
   <div class="grid">
     <div class="card"><span class="k">1,534</span><div class="t">datasets held locally · 15.3 TB</div>
       <div class="foot">vendor originals in <code>data-download</code>, kept by policy · measured 04:09</div></div>
-    <div class="card"><span class="k">2</span><div class="t">datasets converted, awaiting push · 0.4 GB</div>
+    <div class="card"><span class="k">2</span><div class="t">datasets converted, awaiting push · 0.3 GB</div>
       <div class="foot">6 files in <code>data-ready</code> on scratch, counted on disk</div></div>
     <div class="card is-ready"><span class="k">860</span><div class="t">datasets delivered to WCH</div>
       <div class="foot">219,939 files confirmed on the staging server</div></div>
