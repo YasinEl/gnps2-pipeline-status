@@ -142,7 +142,7 @@
   <p class="lab">Repository → GNPS2 acquisition</p>
   <h1>GNPS2 Corpus Pipeline</h1>
   <p class="sub">Datasets flow repository → download → conversion → WCH staging server, and the mz(x)ML is deleted here once WCH confirms it. 3,319 datasets are in play, 238,679 files fetched so far.</p>
-  <p class="stamp">Snapshot 2026-10-08 09:42 -0700 · downloads: ALL PAUSED · scratch 25 GiB · conversion: running</p>
+  <p class="stamp">Snapshot 2026-10-08 09:48 -0700 · downloads: ALL PAUSED · scratch 23 GiB · conversion: running</p>
 </header>
 
 <div class="banner"><b>Downloads are stopped — every stream is refusing at the 5,120 GiB floor.</b> 5,148 GiB free leaves 28 GiB above the floor, less than the 200 GiB of slack a download needs, so all three streams walk their queues refusing each dataset; 2,159 datasets have nothing fetched. Conversion and the WCH hand-off are unaffected and still running. This does not clear by itself: <code>data-ready</code> moved to gscratch, so the drain frees nothing on this volume, and what is left here is vendor originals kept by policy.</div>
@@ -153,8 +153,8 @@
   <div class="grid">
     <div class="card"><span class="k">1,534</span><div class="t">datasets held locally · 15.3 TB</div>
       <div class="foot">vendor originals in <code>data-download</code>, kept by policy · measured 09:07</div></div>
-    <div class="card"><span class="k">3</span><div class="t">datasets converted, awaiting push · 122.5 GB</div>
-      <div class="foot">116 files in <code>data-ready</code> on scratch, counted on disk</div></div>
+    <div class="card"><span class="k">3</span><div class="t">datasets converted, awaiting push · 125.1 GB</div>
+      <div class="foot">117 files in <code>data-ready</code> on scratch, counted on disk</div></div>
     <div class="card is-ready"><span class="k">860</span><div class="t">datasets delivered to WCH</div>
       <div class="foot">219,939 files confirmed on the staging server</div></div>
     <div class="card"><span class="k">1.87</span><div class="t">TiB of mzML reclaimed</div>
@@ -323,14 +323,14 @@
   <div class="vol">
     <p class="lab">gscratch · <code>data-ready</code> · 3,597 GiB total, shared</p>
     <div class="track">
-      <div class="used" style="width:99.3%"></div>
+      <div class="used" style="width:99.4%"></div>
       <div class="floor" style="width:0.6%"></div>
       <div class="avail" style="width:0.1%"></div>
     </div>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--ink-3)"></span><b>3,573 GiB</b> used — mostly other people's data</span>
+      <span><span class="swatch" style="background:var(--ink-3)"></span><b>3,574 GiB</b> used — mostly other people's data</span>
       <span><span class="swatch" style="background:var(--blocked)"></span><b>20 GiB</b> conversion floor + reserve</span>
-      <span><span class="swatch" style="background:var(--accent)"></span><b>5 GiB</b> conversion may still use</span>
+      <span><span class="swatch" style="background:var(--accent)"></span><b>3 GiB</b> conversion may still use</span>
     </div>
   </div>
 </section>
@@ -396,8 +396,8 @@
   </div>
 
   <div class="after">
-    <strong>In the buffer right now:</strong> 0.12 TB once symlinks are followed —
-    0.12 TB of files we converted and 0.00 TB of open-format files
+    <strong>In the buffer right now:</strong> 0.13 TB once symlinks are followed —
+    0.13 TB of files we converted and 0.00 TB of open-format files
     symlinked back into <code>data-download/</code>. This figure is meant to stay small: it is
     what the drain has not yet moved, not the size of the corpus.
   </div>
