@@ -145,7 +145,7 @@
   <p class="lab">Repository → GNPS2 acquisition</p>
   <h1>GNPS2 Corpus Pipeline</h1>
   <p class="sub">Datasets flow repository → download → conversion → WCH staging server, and the mz(x)ML is deleted here once WCH confirms it. 3,319 datasets are in play, 238,679 files fetched so far.</p>
-  <p class="stamp">Snapshot 2026-10-08 16:12 -0700 · downloads: ALL PAUSED · scratch 4 GiB · conversion: running</p>
+  <p class="stamp">Snapshot 2026-10-08 16:18 -0700 · downloads: ALL PAUSED · scratch 3 GiB · conversion: running</p>
 </header>
 
 <div class="banner"><b>Downloads halted — free space is below the 5,120 GiB floor.</b> 5,113 GB free against a 5,120 GB reserve, so every download stream is paused and in-flight Globus transfers were cancelled. Nothing is being lost; conversion continues and writes only tens of MB per file. Restoring the floor needs a deletion or push-back decision.</div>
@@ -156,7 +156,7 @@
   <div class="grid">
     <div class="card"><span class="k">1,534</span><div class="t">datasets held locally · 15.2 TB</div>
       <div class="foot">vendor originals in <code>data-download</code>, kept by policy · measured 16:07</div></div>
-    <div class="card"><span class="k">3</span><div class="t">datasets converted, awaiting push · 164.4 GB</div>
+    <div class="card"><span class="k">3</span><div class="t">datasets converted, awaiting push · 166.2 GB</div>
       <div class="foot">106 files in <code>data-ready</code> on scratch, counted on disk</div></div>
     <div class="card is-ready"><span class="k">862</span><div class="t">datasets delivered to WCH</div>
       <div class="foot">220,005 files confirmed on the staging server</div></div>
@@ -230,7 +230,7 @@
     <div class="card"><span class="t" style="display:block;margin-bottom:6px">Converting</span>
       <div class="foot" style="font-size:13px">MSV000101404 — 73 of 93 acquisitions converted</div></div>
     <div class="card"><span class="t" style="display:block;margin-bottom:6px">Uploading to the archive</span>
-      <div class="foot" style="font-size:13px">workbench/ST000763 — 8,697 files / 34.8 of 68.0 GiB (51%), 33.3 GiB to go</div></div>
+      <div class="foot" style="font-size:13px">workbench/ST000763 — 9,225 files / 35.4 of 68.0 GiB (52%), 32.6 GiB to go</div></div>
   </div>
 </section>
 
@@ -341,7 +341,7 @@
       <div class="avail" style="width:0.0%"></div>
     </div>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--ink-3)"></span><b>16,492 GiB</b> used</span>
+      <span><span class="swatch" style="background:var(--ink-3)"></span><b>16,493 GiB</b> used</span>
       <span><span class="swatch" style="background:var(--blocked)"></span><b>5,120 GiB</b> reserved floor</span>
       <span><span class="swatch" style="background:var(--accent)"></span><b>0 GiB</b> above the floor — downloads need 200 GiB of this before they will start</span>
     </div>
@@ -355,7 +355,7 @@
       <div class="avail" style="width:0.0%"></div>
     </div>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--ink-3)"></span><b>3,593 GiB</b> used — mostly other people's data</span>
+      <span><span class="swatch" style="background:var(--ink-3)"></span><b>3,594 GiB</b> used — mostly other people's data</span>
       <span><span class="swatch" style="background:var(--blocked)"></span><b>20 GiB</b> conversion floor + reserve</span>
       <span><span class="swatch" style="background:var(--accent)"></span><b>0 GiB</b> conversion may still use</span>
     </div>
@@ -423,8 +423,8 @@
   </div>
 
   <div class="after">
-    <strong>In the buffer right now:</strong> 0.16 TB once symlinks are followed —
-    0.16 TB of files we converted and 0.00 TB of open-format files
+    <strong>In the buffer right now:</strong> 0.17 TB once symlinks are followed —
+    0.17 TB of files we converted and 0.00 TB of open-format files
     symlinked back into <code>data-download/</code>. This figure is meant to stay small: it is
     what the drain has not yet moved, not the size of the corpus.
   </div>
