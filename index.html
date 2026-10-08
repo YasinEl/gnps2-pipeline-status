@@ -142,7 +142,7 @@
   <p class="lab">Repository → GNPS2 acquisition</p>
   <h1>GNPS2 Corpus Pipeline</h1>
   <p class="sub">Datasets flow repository → download → conversion → WCH staging server, and the mz(x)ML is deleted here once WCH confirms it. 3,319 datasets are in play, 238,679 files fetched so far.</p>
-  <p class="stamp">Snapshot 2026-10-08 05:18 -0700 · downloads: ALL PAUSED · scratch 90 GiB · conversion: running</p>
+  <p class="stamp">Snapshot 2026-10-08 05:30 -0700 · downloads: ALL PAUSED · scratch 88 GiB · conversion: running</p>
 </header>
 
 <div class="banner"><b>Downloads are stopped — every stream is refusing at the 5,120 GiB floor.</b> 5,155 GiB free leaves 35 GiB above the floor, less than the 200 GiB of slack a download needs, so all three streams walk their queues refusing each dataset; 2,159 datasets have nothing fetched. Conversion and the WCH hand-off are unaffected and still running. This does not clear by itself: <code>data-ready</code> moved to gscratch, so the drain frees nothing on this volume, and what is left here is vendor originals kept by policy.</div>
@@ -153,8 +153,8 @@
   <div class="grid">
     <div class="card"><span class="k">1,534</span><div class="t">datasets held locally · 15.3 TB</div>
       <div class="foot">vendor originals in <code>data-download</code>, kept by policy · measured 05:08</div></div>
-    <div class="card"><span class="k">2</span><div class="t">datasets converted, awaiting push · 0.0 GB</div>
-      <div class="foot">54 files in <code>data-ready</code> on scratch, counted on disk</div></div>
+    <div class="card"><span class="k">3</span><div class="t">datasets converted, awaiting push · 5.2 GB</div>
+      <div class="foot">67 files in <code>data-ready</code> on scratch, counted on disk</div></div>
     <div class="card is-ready"><span class="k">860</span><div class="t">datasets delivered to WCH</div>
       <div class="foot">219,939 files confirmed on the staging server</div></div>
     <div class="card"><span class="k">1.87</span><div class="t">TiB of mzML reclaimed</div>
@@ -220,6 +220,77 @@
   </div>
 </section>
 
+<section id="archive">
+  <h2>Archive hand-off <span style="font-weight:400;color:var(--ink-3)">· vendor originals</span></h2>
+  <p class="note">The second, independent movement: the original deposit goes to the staging server's <strong>archive area</strong>, and only then may its vendor originals be deleted here. It runs beside conversion and shares nothing with the hand-off above — a file in one area does not count as uploaded in the other. A dataset is archived whatever its conversion state; what the conversion state gates is the local <em>delete</em>, because a raw we have not converted yet is the only thing that can still produce an open file, and the archive offers no download.</p>
+  <div class="grid">
+    <div class="card is-ready"><span class="k">9</span><div class="t">datasets archived · 0.10 TB</div>
+      <div class="foot">0.7% of the 15.2 TB still held locally</div></div>
+    <div class="card"><span class="k">6</span><div class="t">vendor acquisitions deleted · 1.13 GiB</div>
+      <div class="foot">removed only after the archive confirmed every file</div></div>
+    <div class="card"><span class="k">7</span><div class="t">datasets held</div>
+      <div class="foot">archived, but raws kept — conversion incomplete or failing</div></div>
+  </div>
+  <div class="meter" style="margin-top:14px">
+    <p class="lab">Archived, last twelve hours</p>
+    <div id="flowchart" data-metric="b">
+  <div class="fb-tabs">
+    <button type="button" data-m="b" class="on">GiB</button>
+    <button type="button" data-m="f">files</button>
+    <button type="button" data-m="d">datasets</button>
+  </div>
+  <div class="fb-plot">
+    <div class="fb-y"><span class="fb-y2"></span><span class="fb-y1"></span><span>0</span></div>
+    <div class="fb-bars"><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">18</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">19</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">20</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">21</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">22</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">23</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">00</span></div><div class="fb" data-b="41892254958" data-f="423" data-d="6"><div class="fb-col"><i></i></div><span class="fb-lab">01</span></div><div class="fb" data-b="60403972294" data-f="517" data-d="3"><div class="fb-col"><i></i></div><span class="fb-lab">02</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">03</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">04</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">05</span></div></div>
+  </div>
+  <p class="fb-unit"></p>
+</div>
+<script>
+(function () {
+  var root = document.getElementById("flowchart");
+  if (!root) return;
+  var bars = [].slice.call(root.querySelectorAll(".fb"));
+  var H = 56;                                     // plot height in px
+  function fmt(v, m) {
+    if (m !== "b") return String(v);
+    if (v === 0) return "0";
+    return (v / 1073741824).toFixed(v / 1073741824 >= 10 ? 0 : 1);
+  }
+  function draw(m) {
+    var vals = bars.map(function (el) { return Number(el.dataset[m]) || 0; });
+    var peak = Math.max.apply(null, vals) || 1;
+    bars.forEach(function (el, i) {
+      var inner = el.querySelector("i");
+      var frac = vals[i] / peak;
+      inner.style.height = (vals[i] ? Math.max(2, Math.round(H * frac)) : 0) + "px";
+      inner.style.background = vals[i] ? "var(--ready)" : "transparent";
+      el.title = el.querySelector(".fb-lab").textContent + ":00 — " +
+                 (vals[i] ? fmt(vals[i], m) + " " + unit(m) : "nothing");
+    });
+    root.querySelector(".fb-y2").textContent = fmt(peak, m);
+    root.querySelector(".fb-y1").textContent = fmt(peak / 2, m);
+    root.querySelector(".fb-unit").textContent =
+      "y axis: " + unit(m) + " handed off per hour · peak " + fmt(peak, m) + " " + unit(m);
+    root.dataset.metric = m;
+    root.querySelectorAll(".fb-tabs button").forEach(function (b) {
+      b.className = b.dataset.m === m ? "on" : "";
+    });
+  }
+  function unit(m) { return m === "b" ? "GiB" : m === "f" ? "files" : "datasets"; }
+  root.querySelectorAll(".fb-tabs button").forEach(function (b) {
+    b.addEventListener("click", function () { draw(b.dataset.m); });
+  });
+  draw("b");
+})();
+</script>
+    <div class="legend">
+      <span><b>0.0 GiB</b> in the last hour</span>
+      <span><b>0</b> datasets</span>
+      <span class="dim">hourly buckets · the current hour is still filling</span>
+    </div>
+  </div>
+</section>
+
 <section>
   <h2>Disk headroom</h2>
   <p class="note">Two volumes with separate limits, so they are read separately. <strong>Botnet</strong> holds <code>data-download</code> — every vendor original we keep — and carries the 5,120 GiB (~5.50 TB) floor; its freed blocks are not returned promptly, so it only ever grows. <strong>gscratch</strong> holds <code>data-ready</code>, which mzML passes through on its way to WCH; it does release space on deletion, and it is shared with other users, so the free figure moves for reasons that have nothing to do with us.</p>
@@ -241,14 +312,14 @@
   <div class="vol">
     <p class="lab">gscratch · <code>data-ready</code> · 3,597 GiB total, shared</p>
     <div class="track">
-      <div class="used" style="width:97.5%"></div>
+      <div class="used" style="width:97.6%"></div>
       <div class="floor" style="width:0.6%"></div>
       <div class="avail" style="width:1.9%"></div>
     </div>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--ink-3)"></span><b>3,507 GiB</b> used — mostly other people's data</span>
+      <span><span class="swatch" style="background:var(--ink-3)"></span><b>3,510 GiB</b> used — mostly other people's data</span>
       <span><span class="swatch" style="background:var(--blocked)"></span><b>20 GiB</b> conversion floor + reserve</span>
-      <span><span class="swatch" style="background:var(--accent)"></span><b>70 GiB</b> conversion may still use</span>
+      <span><span class="swatch" style="background:var(--accent)"></span><b>68 GiB</b> conversion may still use</span>
     </div>
   </div>
 </section>
@@ -287,19 +358,19 @@
       <p class="stage-desc">Fully downloaded and verified. Waiting for conversion of vendor formats and/or symlinking of open ones — the expensive part is already paid for.</p>
       <div class="bar"><i style="width:26.6%"></i></div>
     </div>
-    <div class="count"><span class="k">883</span><span class="of">datasets · 26.6%</span></div>
-    <div class="count"><span class="k">195,997</span><span class="of">files on disk</span></div>
+    <div class="count"><span class="k">882</span><span class="of">datasets · 26.6%</span></div>
+    <div class="count"><span class="k">194,139</span><span class="of">files on disk</span></div>
   </div>
 
   <div class="stage is-blocked">
     <span class="step">4</span>
     <div>
       <p class="stage-name">Partially converted</p>
-      <p class="stage-desc">Staged, but some acquisitions failed — mostly formats no Linux converter reads. The file count is the failed acquisitions; a further 1,349 in these datasets did stage successfully.</p>
-      <div class="bar"><i style="width:3.6%"></i></div>
+      <p class="stage-desc">Staged, but some acquisitions failed — mostly formats no Linux converter reads. The file count is the failed acquisitions; a further 1,380 in these datasets did stage successfully.</p>
+      <div class="bar"><i style="width:3.7%"></i></div>
     </div>
-    <div class="count"><span class="k">121</span><span class="of">datasets · 3.6%</span></div>
-    <div class="count"><span class="k">6,277</span><span class="of">acquisitions failed</span></div>
+    <div class="count"><span class="k">122</span><span class="of">datasets · 3.7%</span></div>
+    <div class="count"><span class="k">6,337</span><span class="of">acquisitions failed</span></div>
   </div>
 
   <div class="stage is-ready">
@@ -314,8 +385,8 @@
   </div>
 
   <div class="after">
-    <strong>In the buffer right now:</strong> 0.00 TB once symlinks are followed —
-    0.00 TB of files we converted and 0.00 TB of open-format files
+    <strong>In the buffer right now:</strong> 0.01 TB once symlinks are followed —
+    0.01 TB of files we converted and 0.00 TB of open-format files
     symlinked back into <code>data-download/</code>. This figure is meant to stay small: it is
     what the drain has not yet moved, not the size of the corpus.
   </div>
@@ -333,10 +404,10 @@
         <tr><td>Named, injected 21 Aug <span class="pill p-ready">all delivered</span> <span class="dim">· 1 delivered earlier</span></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">0</td></tr>
         <tr><td>ReDU environmental <span class="dim">· 21 delivered earlier</span></td><td class="n">—</td><td class="n">—</td><td class="n">1</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">1</td></tr>
         <tr><td>ReDU, other sample types <span class="dim">· 208 delivered earlier</span></td><td class="n">1</td><td class="n">53</td><td class="n">438</td><td class="n">34</td><td class="n">28</td><td class="n">1,529</td><td class="n">2,083</td></tr>
-        <tr><td>Everything else <span class="dim">· 480 delivered earlier</span></td><td class="n">—</td><td class="n">51</td><td class="n">444</td><td class="n">21</td><td class="n">72</td><td class="n">629</td><td class="n">1,217</td></tr>
+        <tr><td>Everything else <span class="dim">· 480 delivered earlier</span></td><td class="n">—</td><td class="n">52</td><td class="n">443</td><td class="n">21</td><td class="n">72</td><td class="n">629</td><td class="n">1,217</td></tr>
         <tr><td>Zip-only, spectral inside</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">1</td><td class="n">1</td></tr>
         <tr><td>Staged by earlier work</td><td class="n">—</td><td class="n">17</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">17</td></tr>
-        <tr class="total"><td>Total</td><td class="n">1</td><td class="n">121</td><td class="n">883</td><td class="n">55</td><td class="n">100</td><td class="n">2,159</td><td class="n">3,319</td></tr>
+        <tr class="total"><td>Total</td><td class="n">1</td><td class="n">122</td><td class="n">882</td><td class="n">55</td><td class="n">100</td><td class="n">2,159</td><td class="n">3,319</td></tr>
       </tbody>
     </table>
   </div>
@@ -349,10 +420,10 @@
     <table>
       <thead><tr><th>Repository</th><th class="n">Ready</th><th class="n">Partial</th><th class="n">Awaiting</th><th class="n">Downloading</th><th class="n">Parked</th><th class="n">Not started</th><th class="n">Files on disk</th></tr></thead>
       <tbody>
-        <tr><td>MassIVE</td><td class="n">0</td><td class="n">25</td><td class="n">409</td><td class="n">7</td><td class="n">59</td><td class="n">0</td><td class="n">90,978</td></tr>
+        <tr><td>MassIVE</td><td class="n">0</td><td class="n">26</td><td class="n">408</td><td class="n">7</td><td class="n">59</td><td class="n">0</td><td class="n">90,978</td></tr>
         <tr><td>Workbench</td><td class="n">0</td><td class="n">29</td><td class="n">194</td><td class="n">3</td><td class="n">35</td><td class="n">1,268</td><td class="n">85,958</td></tr>
         <tr><td>MetaboLights</td><td class="n">1</td><td class="n">50</td><td class="n">280</td><td class="n">45</td><td class="n">6</td><td class="n">891</td><td class="n">61,743</td></tr>
-        <tr class="total"><td>Total</td><td class="n">1</td><td class="n">121</td><td class="n">883</td><td class="n">55</td><td class="n">100</td><td class="n">2,159</td><td class="n">238,679</td></tr>
+        <tr class="total"><td>Total</td><td class="n">1</td><td class="n">122</td><td class="n">882</td><td class="n">55</td><td class="n">100</td><td class="n">2,159</td><td class="n">238,679</td></tr>
       </tbody>
     </table>
   </div>
@@ -360,12 +431,12 @@
 
 <section>
   <h2>How acquisitions reach <code>data-ready</code></h2>
-  <p class="note"><strong>These five figures cover the whole <code>data-ready</code> folder — 1,349 acquisitions — not just this run.</strong>
-  220 of them were staged by earlier work outside the 3,319-dataset priority list and 1,129 belong to it; 0 are still in the buffer, the rest already went to WCH. Most acquisitions need no conversion at all — an open-format file is symlinked, costing no disk and no compute. Only vendor formats are converted, and that is where the time goes.</p>
+  <p class="note"><strong>These five figures cover the whole <code>data-ready</code> folder — 1,380 acquisitions — not just this run.</strong>
+  220 of them were staged by earlier work outside the 3,319-dataset priority list and 1,160 belong to it; 0 are still in the buffer, the rest already went to WCH. Most acquisitions need no conversion at all — an open-format file is symlinked, costing no disk and no compute. Only vendor formats are converted, and that is where the time goes.</p>
   <div class="grid">
     <div class="card"><span class="k">1,349</span><div class="t">Symlinked, already open format</div><div class="foot">no conversion needed</div></div>
     <div class="card"><span class="k">0</span><div class="t">ThermoRawFileParser</div><div class="foot">~30 s per file</div></div>
-    <div class="card"><span class="k">0</span><div class="t">msconvert</div><div class="foot">Bruker · Agilent · Sciex · Waters</div></div>
+    <div class="card"><span class="k">31</span><div class="t">msconvert</div><div class="foot">Bruker · Agilent · Sciex · Waters</div></div>
     <div class="card"><span class="k">0</span><div class="t">Rust parser</div><div class="foot">~0.5 s per file · 30–50× faster</div></div>
     <div class="card"><span class="k">0</span><div class="t">OpenMS</div><div class="foot">legacy mzData</div></div>
   </div>
@@ -389,15 +460,15 @@
 
 <section>
   <h2>Acquisitions that will not convert</h2>
-  <p class="note">6,277 failures — not a backlog. Most are formats ProteoWizard cannot read on Linux at all, so retrying them costs time on every pass and changes nothing.</p>
+  <p class="note">6,337 failures — not a backlog. Most are formats ProteoWizard cannot read on Linux at all, so retrying them costs time on every pass and changes nothing.</p>
   <div class="scroll">
     <table>
       <thead><tr><th>Format</th><th class="n">Failures</th><th>Status</th></tr></thead>
       <tbody>
         <tr><td>Bruker / Agilent <code>.d</code></td><td class="n">522</td><td><span class="pill p-blocked">permanent</span> <span class="dim">ChemStation-era GC-MS; no Linux reader exists</span></td></tr>
-        <tr><td>Thermo <code>.raw</code></td><td class="n">4,367</td><td><span class="pill p-pending">file-level</span> <span class="dim">reader hits per-scan errors; worth one msconvert retry</span></td></tr>
+        <tr><td>Thermo <code>.raw</code></td><td class="n">4,397</td><td><span class="pill p-pending">file-level</span> <span class="dim">reader hits per-scan errors; worth one msconvert retry</span></td></tr>
         <tr><td>Sciex <code>.wiff</code></td><td class="n">1,218</td><td><span class="pill p-pending">recoverable</span> <span class="dim">missing <code>.wiff.scan</code> companions — a download gap, not a conversion one</span></td></tr>
-        <tr><td>Waters <code>.raw</code></td><td class="n">138</td><td><span class="pill p-blocked">permanent</span></td></tr>
+        <tr><td>Waters <code>.raw</code></td><td class="n">168</td><td><span class="pill p-blocked">permanent</span></td></tr>
       </tbody>
     </table>
   </div>
