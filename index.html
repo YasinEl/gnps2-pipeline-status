@@ -145,10 +145,10 @@
   <p class="lab">Repository → GNPS2 acquisition</p>
   <h1>GNPS2 Corpus Pipeline</h1>
   <p class="sub">Datasets flow repository → download → conversion → WCH staging server, and the mz(x)ML is deleted here once WCH confirms it. 3,319 datasets are in play, 238,679 files fetched so far.</p>
-  <p class="stamp">Snapshot 2026-10-08 12:16 -0700 · downloads: ALL PAUSED · scratch 3 GiB · conversion: PAUSED at the disk reserve</p>
+  <p class="stamp">Snapshot 2026-10-08 12:18 -0700 · downloads: ALL PAUSED · scratch 3 GiB · conversion: PAUSED at the disk reserve</p>
 </header>
 
-<div class="banner"><b>Downloads are stopped — every stream is refusing at the 5,120 GiB floor.</b> 5,130 GiB free leaves 10 GiB above the floor, less than the 200 GiB of slack a download needs, so all three streams walk their queues refusing each dataset; 2,159 datasets have nothing fetched. Conversion and the WCH hand-off are unaffected and still running. This does not clear by itself: <code>data-ready</code> moved to gscratch, so the drain frees nothing on this volume, and what is left here is vendor originals kept by policy.</div>
+<div class="banner"><b>Downloads are stopped — every stream is refusing at the 5,120 GiB floor.</b> 5,129 GiB free leaves 9 GiB above the floor, less than the 200 GiB of slack a download needs, so all three streams walk their queues refusing each dataset; 2,159 datasets have nothing fetched. Conversion and the WCH hand-off are unaffected and still running. This does not clear by itself: <code>data-ready</code> moved to gscratch, so the drain frees nothing on this volume, and what is left here is vendor originals kept by policy.</div>
 
 <section id="flow">
   <h2>Hand-off flow</h2>
@@ -250,9 +250,9 @@
   <h2>Archive hand-off <span style="font-weight:400;color:var(--ink-3)">· vendor originals</span></h2>
   <p class="note">The second, independent movement: the original deposit goes to the staging server's <strong>archive area</strong>, and only then may its vendor originals be deleted here. It runs beside conversion and shares nothing with the hand-off above — a file in one area does not count as uploaded in the other. A dataset is archived whatever its conversion state; what the conversion state gates is the local <em>delete</em>, because a raw we have not converted yet is the only thing that can still produce an open file, and the archive offers no download.</p>
   <div class="grid">
-    <div class="card is-ready"><span class="k">23</span><div class="t">datasets archived · 0.12 TB</div>
-      <div class="foot">0.8% of the 15.1 TB still held locally</div></div>
-    <div class="card"><span class="k">321</span><div class="t">vendor acquisitions deleted · 14.15 GiB</div>
+    <div class="card is-ready"><span class="k">24</span><div class="t">datasets archived · 0.14 TB</div>
+      <div class="foot">0.9% of the 15.1 TB still held locally</div></div>
+    <div class="card"><span class="k">384</span><div class="t">vendor acquisitions deleted · 26.50 GiB</div>
       <div class="foot">removed only after the archive confirmed every file</div></div>
     <div class="card"><span class="k">11</span><div class="t">datasets held</div>
       <div class="foot">archived, but raws kept — conversion incomplete or failing</div></div>
@@ -267,7 +267,7 @@
   </div>
   <div class="fb-plot">
     <div class="fb-y"><span class="fb-y2"></span><span class="fb-y1"></span><span>0</span></div>
-    <div class="fb-bars"><div class="fb" data-b="0" data-f="0" data-d="6"><div class="fb-col"><i></i></div><span class="fb-lab">01</span></div><div class="fb" data-b="0" data-f="0" data-d="3"><div class="fb-col"><i></i></div><span class="fb-lab">02</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">03</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">04</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">05</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">06</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">07</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">08</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">09</span></div><div class="fb" data-b="2930275585" data-f="451" data-d="6"><div class="fb-col"><i></i></div><span class="fb-lab">10</span></div><div class="fb" data-b="13556298863" data-f="133" data-d="8"><div class="fb-col"><i></i></div><span class="fb-lab">11</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">12</span></div></div>
+    <div class="fb-bars"><div class="fb" data-b="0" data-f="0" data-d="6"><div class="fb-col"><i></i></div><span class="fb-lab">01</span></div><div class="fb" data-b="0" data-f="0" data-d="3"><div class="fb-col"><i></i></div><span class="fb-lab">02</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">03</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">04</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">05</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">06</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">07</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">08</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">09</span></div><div class="fb" data-b="2930275585" data-f="451" data-d="6"><div class="fb-col"><i></i></div><span class="fb-lab">10</span></div><div class="fb" data-b="13556298863" data-f="133" data-d="8"><div class="fb-col"><i></i></div><span class="fb-lab">11</span></div><div class="fb" data-b="595892" data-f="2" data-d="1"><div class="fb-col"><i></i></div><span class="fb-lab">12</span></div></div>
   </div>
   <p class="fb-unit"></p>
 </div>
@@ -311,7 +311,7 @@
 </script>
     <div class="legend">
       <span><b>12.6 GiB</b> in the last hour</span>
-      <span><b>4</b> datasets</span>
+      <span><b>5</b> datasets</span>
       <span class="dim">hourly buckets · the current hour is still filling</span>
     </div>
   </div>
@@ -322,16 +322,16 @@
   <p class="note">Two volumes with separate limits, so they are read separately. <strong>Botnet</strong> holds <code>data-download</code> — every vendor original we keep — and carries the 5,120 GiB (~5.50 TB) floor; its freed blocks are not returned promptly, so it only ever grows. <strong>gscratch</strong> holds <code>data-ready</code>, which mzML passes through on its way to WCH; it does release space on deletion, and it is shared with other users, so the free figure moves for reasons that have nothing to do with us.</p>
 
   <div class="vol">
-    <p class="lab">Botnet pool · <code>data-download</code> · 21,663 GiB total</p>
+    <p class="lab">Botnet pool · <code>data-download</code> · 21,652 GiB total</p>
     <div class="track">
       <div class="used" style="width:76.3%"></div>
       <div class="floor" style="width:23.6%"></div>
       <div class="avail" style="width:0.0%"></div>
     </div>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--ink-3)"></span><b>16,533 GiB</b> used</span>
+      <span><span class="swatch" style="background:var(--ink-3)"></span><b>16,523 GiB</b> used</span>
       <span><span class="swatch" style="background:var(--blocked)"></span><b>5,120 GiB</b> reserved floor</span>
-      <span><span class="swatch" style="background:var(--accent)"></span><b>10 GiB</b> above the floor — downloads need 200 GiB of this before they will start</span>
+      <span><span class="swatch" style="background:var(--accent)"></span><b>9 GiB</b> above the floor — downloads need 200 GiB of this before they will start</span>
     </div>
   </div>
 
