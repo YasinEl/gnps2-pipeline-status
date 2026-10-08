@@ -142,10 +142,10 @@
   <p class="lab">Repository → GNPS2 acquisition</p>
   <h1>GNPS2 Corpus Pipeline</h1>
   <p class="sub">Datasets flow repository → download → conversion → WCH staging server, and the mz(x)ML is deleted here once WCH confirms it. 3,319 datasets are in play, 238,679 files fetched so far.</p>
-  <p class="stamp">Snapshot 2026-10-08 01:12 -0700 · downloads: ALL PAUSED · scratch 90 GiB · conversion: STOPPED</p>
+  <p class="stamp">Snapshot 2026-10-08 01:42 -0700 · downloads: ALL PAUSED · scratch 90 GiB · conversion: running</p>
 </header>
 
-<div class="banner"><b>Downloads are stopped — every stream is refusing at the 5,120 GiB floor.</b> 5,169 GiB free leaves 49 GiB above the floor, less than the 200 GiB of slack a download needs, so all three streams walk their queues refusing each dataset; 2,159 datasets have nothing fetched. Conversion and the WCH hand-off are unaffected and still running. This does not clear by itself: <code>data-ready</code> moved to gscratch, so the drain frees nothing on this volume, and what is left here is vendor originals kept by policy.</div>
+<div class="banner"><b>Downloads are stopped — every stream is refusing at the 5,120 GiB floor.</b> 5,167 GiB free leaves 47 GiB above the floor, less than the 200 GiB of slack a download needs, so all three streams walk their queues refusing each dataset; 2,159 datasets have nothing fetched. Conversion and the WCH hand-off are unaffected and still running. This does not clear by itself: <code>data-ready</code> moved to gscratch, so the drain frees nothing on this volume, and what is left here is vendor originals kept by policy.</div>
 
 <section id="flow">
   <h2>Hand-off flow</h2>
@@ -153,12 +153,12 @@
   <div class="grid">
     <div class="card"><span class="k">1,534</span><div class="t">datasets held locally · 15.3 TB</div>
       <div class="foot">vendor originals in <code>data-download</code>, kept by policy · measured 07:08</div></div>
-    <div class="card"><span class="k">2</span><div class="t">datasets converted, awaiting push · 0.2 GB</div>
+    <div class="card"><span class="k">2</span><div class="t">datasets converted, awaiting push · 0.0 GB</div>
       <div class="foot">6 files in <code>data-ready</code> on scratch, counted on disk</div></div>
-    <div class="card is-ready"><span class="k">859</span><div class="t">datasets delivered to WCH</div>
-      <div class="foot">219,911 files confirmed on the staging server</div></div>
+    <div class="card is-ready"><span class="k">860</span><div class="t">datasets delivered to WCH</div>
+      <div class="foot">219,939 files confirmed on the staging server</div></div>
     <div class="card"><span class="k">1.87</span><div class="t">TiB of mzML reclaimed</div>
-      <div class="foot">361 datasets, 28,065 files deleted after verification</div></div>
+      <div class="foot">361 datasets, 28,068 files deleted after verification</div></div>
   </div>
   <div class="meter" style="margin-top:14px">
     <p class="lab">Hand-off volume, last twelve hours</p>
@@ -170,7 +170,7 @@
   </div>
   <div class="fb-plot">
     <div class="fb-y"><span class="fb-y2"></span><span class="fb-y1"></span><span>0</span></div>
-    <div class="fb-bars"><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">14</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">15</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">16</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">17</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">18</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">19</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">20</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">21</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">22</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">23</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">00</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">01</span></div></div>
+    <div class="fb-bars"><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">14</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">15</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">16</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">17</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">18</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">19</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">20</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">21</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">22</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">23</span></div><div class="fb" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">00</span></div><div class="fb" data-b="243856048" data-f="3" data-d="1"><div class="fb-col"><i></i></div><span class="fb-lab">01</span></div></div>
   </div>
   <p class="fb-unit"></p>
 </div>
@@ -213,8 +213,8 @@
 })();
 </script>
     <div class="legend">
-      <span><b>0.0 GiB</b> in the last hour</span>
-      <span><b>0</b> datasets · <b>0</b> files</span>
+      <span><b>0.2 GiB</b> in the last hour</span>
+      <span><b>1</b> datasets · <b>3</b> files</span>
       <span class="dim">hourly buckets · switch the y axis with the buttons above</span>
     </div>
   </div>
@@ -232,9 +232,9 @@
       <div class="avail" style="width:0.2%"></div>
     </div>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--ink-3)"></span><b>16,506 GiB</b> used</span>
+      <span><span class="swatch" style="background:var(--ink-3)"></span><b>16,507 GiB</b> used</span>
       <span><span class="swatch" style="background:var(--blocked)"></span><b>5,120 GiB</b> reserved floor</span>
-      <span><span class="swatch" style="background:var(--accent)"></span><b>49 GiB</b> above the floor — downloads need 200 GiB of this before they will start</span>
+      <span><span class="swatch" style="background:var(--accent)"></span><b>47 GiB</b> above the floor — downloads need 200 GiB of this before they will start</span>
     </div>
   </div>
 
@@ -373,13 +373,13 @@
 
 <section>
   <h2>Conversion queue</h2>
-  <p class="note">954 downloaded datasets wait to be staged, worked in this order. Every Thermo dataset is checked against the reference converter before the fast path is allowed; anything that disagrees stays on the slow, trusted route.</p>
+  <p class="note">981 downloaded datasets wait to be staged, worked in this order. Every Thermo dataset is checked against the reference converter before the fast path is allowed; anything that disagrees stays on the slow, trusted route.</p>
   <div class="scroll">
     <table>
       <thead><tr><th>Order</th><th>Group</th><th class="n">Datasets</th><th class="n">Vendor files to convert</th><th>Why here</th></tr></thead>
       <tbody>
         <tr><td class="n">1</td><td>Environmental</td><td class="n">1</td><td class="n">474</td><td class="dim">Top priority after the named list</td></tr>
-        <tr><td class="n">2</td><td>Small &amp; symlink-only</td><td class="n">850</td><td class="n">27,250</td><td class="dim">Cheapest wins — most stage in seconds</td></tr>
+        <tr><td class="n">2</td><td>Small &amp; symlink-only</td><td class="n">877</td><td class="n">27,815</td><td class="dim">Cheapest wins — most stage in seconds</td></tr>
         <tr><td class="n">3</td><td>Thermo-dominant</td><td class="n">71</td><td class="n">48,296</td><td class="dim">Eligible for the fast Rust converter</td></tr>
         <tr><td class="n">4</td><td>Other vendors</td><td class="n">32</td><td class="n">17,172</td><td class="dim">msconvert only — slowest per file</td></tr>
       </tbody>
