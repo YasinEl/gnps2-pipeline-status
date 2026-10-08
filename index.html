@@ -142,7 +142,7 @@
   <p class="lab">Repository → GNPS2 acquisition</p>
   <h1>GNPS2 Corpus Pipeline</h1>
   <p class="sub">Datasets flow repository → download → conversion → WCH staging server, and the mz(x)ML is deleted here once WCH confirms it. 3,319 datasets are in play, 238,679 files fetched so far.</p>
-  <p class="stamp">Snapshot 2026-10-08 06:14 -0700 · downloads: ALL PAUSED · scratch 76 GiB · conversion: running</p>
+  <p class="stamp">Snapshot 2026-10-08 06:18 -0700 · downloads: ALL PAUSED · scratch 75 GiB · conversion: running</p>
 </header>
 
 <div class="banner"><b>Downloads are stopped — every stream is refusing at the 5,120 GiB floor.</b> 5,154 GiB free leaves 34 GiB above the floor, less than the 200 GiB of slack a download needs, so all three streams walk their queues refusing each dataset; 2,159 datasets have nothing fetched. Conversion and the WCH hand-off are unaffected and still running. This does not clear by itself: <code>data-ready</code> moved to gscratch, so the drain frees nothing on this volume, and what is left here is vendor originals kept by policy.</div>
@@ -153,8 +153,8 @@
   <div class="grid">
     <div class="card"><span class="k">1,534</span><div class="t">datasets held locally · 15.3 TB</div>
       <div class="foot">vendor originals in <code>data-download</code>, kept by policy · measured 06:07</div></div>
-    <div class="card"><span class="k">3</span><div class="t">datasets converted, awaiting push · 24.6 GB</div>
-      <div class="foot">74 files in <code>data-ready</code> on scratch, counted on disk</div></div>
+    <div class="card"><span class="k">3</span><div class="t">datasets converted, awaiting push · 26.3 GB</div>
+      <div class="foot">75 files in <code>data-ready</code> on scratch, counted on disk</div></div>
     <div class="card is-ready"><span class="k">860</span><div class="t">datasets delivered to WCH</div>
       <div class="foot">219,939 files confirmed on the staging server</div></div>
     <div class="card"><span class="k">1.87</span><div class="t">TiB of mzML reclaimed</div>
@@ -314,12 +314,12 @@
     <div class="track">
       <div class="used" style="width:97.9%"></div>
       <div class="floor" style="width:0.6%"></div>
-      <div class="avail" style="width:1.6%"></div>
+      <div class="avail" style="width:1.5%"></div>
     </div>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--ink-3)"></span><b>3,521 GiB</b> used — mostly other people's data</span>
+      <span><span class="swatch" style="background:var(--ink-3)"></span><b>3,522 GiB</b> used — mostly other people's data</span>
       <span><span class="swatch" style="background:var(--blocked)"></span><b>20 GiB</b> conversion floor + reserve</span>
-      <span><span class="swatch" style="background:var(--accent)"></span><b>56 GiB</b> conversion may still use</span>
+      <span><span class="swatch" style="background:var(--accent)"></span><b>55 GiB</b> conversion may still use</span>
     </div>
   </div>
 </section>
@@ -366,7 +366,7 @@
     <span class="step">4</span>
     <div>
       <p class="stage-name">Partially converted</p>
-      <p class="stage-desc">Staged, but some acquisitions failed — mostly formats no Linux converter reads. The file count is the failed acquisitions; a further 1,387 in these datasets did stage successfully.</p>
+      <p class="stage-desc">Staged, but some acquisitions failed — mostly formats no Linux converter reads. The file count is the failed acquisitions; a further 1,388 in these datasets did stage successfully.</p>
       <div class="bar"><i style="width:3.7%"></i></div>
     </div>
     <div class="count"><span class="k">122</span><span class="of">datasets · 3.7%</span></div>
@@ -385,8 +385,8 @@
   </div>
 
   <div class="after">
-    <strong>In the buffer right now:</strong> 0.02 TB once symlinks are followed —
-    0.02 TB of files we converted and 0.00 TB of open-format files
+    <strong>In the buffer right now:</strong> 0.03 TB once symlinks are followed —
+    0.03 TB of files we converted and 0.00 TB of open-format files
     symlinked back into <code>data-download/</code>. This figure is meant to stay small: it is
     what the drain has not yet moved, not the size of the corpus.
   </div>
@@ -431,12 +431,12 @@
 
 <section>
   <h2>How acquisitions reach <code>data-ready</code></h2>
-  <p class="note"><strong>These five figures cover the whole <code>data-ready</code> folder — 1,387 acquisitions — not just this run.</strong>
-  220 of them were staged by earlier work outside the 3,319-dataset priority list and 1,167 belong to it; 0 are still in the buffer, the rest already went to WCH. Most acquisitions need no conversion at all — an open-format file is symlinked, costing no disk and no compute. Only vendor formats are converted, and that is where the time goes.</p>
+  <p class="note"><strong>These five figures cover the whole <code>data-ready</code> folder — 1,388 acquisitions — not just this run.</strong>
+  220 of them were staged by earlier work outside the 3,319-dataset priority list and 1,168 belong to it; 0 are still in the buffer, the rest already went to WCH. Most acquisitions need no conversion at all — an open-format file is symlinked, costing no disk and no compute. Only vendor formats are converted, and that is where the time goes.</p>
   <div class="grid">
     <div class="card"><span class="k">1,349</span><div class="t">Symlinked, already open format</div><div class="foot">no conversion needed</div></div>
     <div class="card"><span class="k">0</span><div class="t">ThermoRawFileParser</div><div class="foot">~30 s per file</div></div>
-    <div class="card"><span class="k">38</span><div class="t">msconvert</div><div class="foot">Bruker · Agilent · Sciex · Waters</div></div>
+    <div class="card"><span class="k">39</span><div class="t">msconvert</div><div class="foot">Bruker · Agilent · Sciex · Waters</div></div>
     <div class="card"><span class="k">0</span><div class="t">Rust parser</div><div class="foot">~0.5 s per file · 30–50× faster</div></div>
     <div class="card"><span class="k">0</span><div class="t">OpenMS</div><div class="foot">legacy mzData</div></div>
   </div>
