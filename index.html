@@ -142,7 +142,7 @@
   <p class="lab">Repository → GNPS2 acquisition</p>
   <h1>GNPS2 Corpus Pipeline</h1>
   <p class="sub">Datasets flow repository → download → conversion → WCH staging server, and the mz(x)ML is deleted here once WCH confirms it. 3,319 datasets are in play, 238,679 files fetched so far.</p>
-  <p class="stamp">Snapshot 2026-10-08 05:12 -0700 · downloads: ALL PAUSED · scratch 90 GiB · conversion: running</p>
+  <p class="stamp">Snapshot 2026-10-08 05:18 -0700 · downloads: ALL PAUSED · scratch 90 GiB · conversion: running</p>
 </header>
 
 <div class="banner"><b>Downloads are stopped — every stream is refusing at the 5,120 GiB floor.</b> 5,155 GiB free leaves 35 GiB above the floor, less than the 200 GiB of slack a download needs, so all three streams walk their queues refusing each dataset; 2,159 datasets have nothing fetched. Conversion and the WCH hand-off are unaffected and still running. This does not clear by itself: <code>data-ready</code> moved to gscratch, so the drain frees nothing on this volume, and what is left here is vendor originals kept by policy.</div>
@@ -154,7 +154,7 @@
     <div class="card"><span class="k">1,534</span><div class="t">datasets held locally · 15.3 TB</div>
       <div class="foot">vendor originals in <code>data-download</code>, kept by policy · measured 05:08</div></div>
     <div class="card"><span class="k">2</span><div class="t">datasets converted, awaiting push · 0.0 GB</div>
-      <div class="foot">4 files in <code>data-ready</code> on scratch, counted on disk</div></div>
+      <div class="foot">54 files in <code>data-ready</code> on scratch, counted on disk</div></div>
     <div class="card is-ready"><span class="k">860</span><div class="t">datasets delivered to WCH</div>
       <div class="foot">219,939 files confirmed on the staging server</div></div>
     <div class="card"><span class="k">1.87</span><div class="t">TiB of mzML reclaimed</div>
@@ -287,18 +287,18 @@
       <p class="stage-desc">Fully downloaded and verified. Waiting for conversion of vendor formats and/or symlinking of open ones — the expensive part is already paid for.</p>
       <div class="bar"><i style="width:26.6%"></i></div>
     </div>
-    <div class="count"><span class="k">884</span><span class="of">datasets · 26.6%</span></div>
-    <div class="count"><span class="k">198,939</span><span class="of">files on disk</span></div>
+    <div class="count"><span class="k">883</span><span class="of">datasets · 26.6%</span></div>
+    <div class="count"><span class="k">195,997</span><span class="of">files on disk</span></div>
   </div>
 
   <div class="stage is-blocked">
     <span class="step">4</span>
     <div>
       <p class="stage-name">Partially converted</p>
-      <p class="stage-desc">Staged, but some acquisitions failed — mostly formats no Linux converter reads. The file count is the failed acquisitions; a further 1,319 in these datasets did stage successfully.</p>
+      <p class="stage-desc">Staged, but some acquisitions failed — mostly formats no Linux converter reads. The file count is the failed acquisitions; a further 1,349 in these datasets did stage successfully.</p>
       <div class="bar"><i style="width:3.6%"></i></div>
     </div>
-    <div class="count"><span class="k">120</span><span class="of">datasets · 3.6%</span></div>
+    <div class="count"><span class="k">121</span><span class="of">datasets · 3.6%</span></div>
     <div class="count"><span class="k">6,277</span><span class="of">acquisitions failed</span></div>
   </div>
 
@@ -332,11 +332,11 @@
         <tr><td>Named priority list <span class="pill p-ready">all delivered</span> <span class="dim">· 5 delivered earlier</span></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">0</td></tr>
         <tr><td>Named, injected 21 Aug <span class="pill p-ready">all delivered</span> <span class="dim">· 1 delivered earlier</span></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">0</td></tr>
         <tr><td>ReDU environmental <span class="dim">· 21 delivered earlier</span></td><td class="n">—</td><td class="n">—</td><td class="n">1</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">1</td></tr>
-        <tr><td>ReDU, other sample types <span class="dim">· 208 delivered earlier</span></td><td class="n">1</td><td class="n">52</td><td class="n">439</td><td class="n">34</td><td class="n">28</td><td class="n">1,529</td><td class="n">2,083</td></tr>
+        <tr><td>ReDU, other sample types <span class="dim">· 208 delivered earlier</span></td><td class="n">1</td><td class="n">53</td><td class="n">438</td><td class="n">34</td><td class="n">28</td><td class="n">1,529</td><td class="n">2,083</td></tr>
         <tr><td>Everything else <span class="dim">· 480 delivered earlier</span></td><td class="n">—</td><td class="n">51</td><td class="n">444</td><td class="n">21</td><td class="n">72</td><td class="n">629</td><td class="n">1,217</td></tr>
         <tr><td>Zip-only, spectral inside</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">1</td><td class="n">1</td></tr>
         <tr><td>Staged by earlier work</td><td class="n">—</td><td class="n">17</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">17</td></tr>
-        <tr class="total"><td>Total</td><td class="n">1</td><td class="n">120</td><td class="n">884</td><td class="n">55</td><td class="n">100</td><td class="n">2,159</td><td class="n">3,319</td></tr>
+        <tr class="total"><td>Total</td><td class="n">1</td><td class="n">121</td><td class="n">883</td><td class="n">55</td><td class="n">100</td><td class="n">2,159</td><td class="n">3,319</td></tr>
       </tbody>
     </table>
   </div>
@@ -350,9 +350,9 @@
       <thead><tr><th>Repository</th><th class="n">Ready</th><th class="n">Partial</th><th class="n">Awaiting</th><th class="n">Downloading</th><th class="n">Parked</th><th class="n">Not started</th><th class="n">Files on disk</th></tr></thead>
       <tbody>
         <tr><td>MassIVE</td><td class="n">0</td><td class="n">25</td><td class="n">409</td><td class="n">7</td><td class="n">59</td><td class="n">0</td><td class="n">90,978</td></tr>
-        <tr><td>Workbench</td><td class="n">0</td><td class="n">28</td><td class="n">195</td><td class="n">3</td><td class="n">35</td><td class="n">1,268</td><td class="n">85,958</td></tr>
+        <tr><td>Workbench</td><td class="n">0</td><td class="n">29</td><td class="n">194</td><td class="n">3</td><td class="n">35</td><td class="n">1,268</td><td class="n">85,958</td></tr>
         <tr><td>MetaboLights</td><td class="n">1</td><td class="n">50</td><td class="n">280</td><td class="n">45</td><td class="n">6</td><td class="n">891</td><td class="n">61,743</td></tr>
-        <tr class="total"><td>Total</td><td class="n">1</td><td class="n">120</td><td class="n">884</td><td class="n">55</td><td class="n">100</td><td class="n">2,159</td><td class="n">238,679</td></tr>
+        <tr class="total"><td>Total</td><td class="n">1</td><td class="n">121</td><td class="n">883</td><td class="n">55</td><td class="n">100</td><td class="n">2,159</td><td class="n">238,679</td></tr>
       </tbody>
     </table>
   </div>
@@ -360,10 +360,10 @@
 
 <section>
   <h2>How acquisitions reach <code>data-ready</code></h2>
-  <p class="note"><strong>These five figures cover the whole <code>data-ready</code> folder — 1,319 acquisitions — not just this run.</strong>
-  220 of them were staged by earlier work outside the 3,319-dataset priority list and 1,099 belong to it; 0 are still in the buffer, the rest already went to WCH. Most acquisitions need no conversion at all — an open-format file is symlinked, costing no disk and no compute. Only vendor formats are converted, and that is where the time goes.</p>
+  <p class="note"><strong>These five figures cover the whole <code>data-ready</code> folder — 1,349 acquisitions — not just this run.</strong>
+  220 of them were staged by earlier work outside the 3,319-dataset priority list and 1,129 belong to it; 0 are still in the buffer, the rest already went to WCH. Most acquisitions need no conversion at all — an open-format file is symlinked, costing no disk and no compute. Only vendor formats are converted, and that is where the time goes.</p>
   <div class="grid">
-    <div class="card"><span class="k">1,319</span><div class="t">Symlinked, already open format</div><div class="foot">no conversion needed</div></div>
+    <div class="card"><span class="k">1,349</span><div class="t">Symlinked, already open format</div><div class="foot">no conversion needed</div></div>
     <div class="card"><span class="k">0</span><div class="t">ThermoRawFileParser</div><div class="foot">~30 s per file</div></div>
     <div class="card"><span class="k">0</span><div class="t">msconvert</div><div class="foot">Bruker · Agilent · Sciex · Waters</div></div>
     <div class="card"><span class="k">0</span><div class="t">Rust parser</div><div class="foot">~0.5 s per file · 30–50× faster</div></div>
