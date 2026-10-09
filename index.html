@@ -153,10 +153,10 @@
   <p class="lab">Repository → GNPS2 acquisition</p>
   <h1>GNPS2 Corpus Pipeline</h1>
   <p class="sub">Files flow repository → download → conversion → WCH staging server, and the mz(x)ML is deleted here once WCH confirms it. <strong>237,757 files</strong> fetched so far, across 13,051 datasets.</p>
-  <p class="stamp">Snapshot 2026-10-09 22:21 CEST · downloads: ALL PAUSED · scratch 56 GiB · conversion: running</p>
+  <p class="stamp">Snapshot 2026-10-09 22:51 CEST · downloads: ALL PAUSED · scratch 42 GiB · conversion: running</p>
 </header>
 
-<div class="banner"><b>Downloads halted — free space is below the 5,120 GiB floor.</b> 4,919 GB free against a 5,120 GB reserve, so every download stream is paused and in-flight Globus transfers were cancelled. Nothing is being lost; conversion continues and writes only tens of MB per file. Restoring the floor needs a deletion or push-back decision.</div>
+<div class="banner"><b>Downloads halted — free space is below the 5,120 GiB floor.</b> 4,909 GB free against a 5,120 GB reserve, so every download stream is paused and in-flight Globus transfers were cancelled. Nothing is being lost; conversion continues and writes only tens of MB per file. Restoring the floor needs a deletion or push-back decision.</div>
 
 <section id="flow">
   <h2>Hand-off flow</h2>
@@ -164,7 +164,7 @@
   <div class="grid">
     <div class="card"><span class="k">540,248</span><div class="t">files held locally · 15.0 TB</div>
       <div class="foot">1,534 datasets · vendor originals in <code>data-download</code>, kept by policy · measured 13:06</div></div>
-    <div class="card"><span class="k">12</span><div class="t">files converted, awaiting push · 59.8 GB</div>
+    <div class="card"><span class="k">15</span><div class="t">files converted, awaiting push · 83.3 GB</div>
       <div class="foot">in <code>data-ready</code> on scratch across 2 datasets, counted on disk</div></div>
     <div class="card is-ready"><span class="k">220,666</span><div class="t">files delivered to WCH</div>
       <div class="foot">confirmed on the staging server · 866 datasets</div></div>
@@ -238,7 +238,7 @@
     <div class="card"><span class="t" style="display:block;margin-bottom:6px">Converting</span>
       <div class="foot" style="font-size:13px">MSV000099241 — 0 of 102 acquisitions converted</div></div>
     <div class="card"><span class="t" style="display:block;margin-bottom:6px">Uploading to the archive</span>
-      <div class="foot" style="font-size:13px">workbench/ST001181 — 935 files / 115.2 of 149.5 GiB (77%), 34.2 GiB to go</div></div>
+      <div class="foot" style="font-size:13px">nothing in the archive queue</div></div>
   </div>
 </section>
 
@@ -270,11 +270,11 @@
   <h2>Archive hand-off <span style="font-weight:400;color:var(--ink-3)">· vendor originals</span></h2>
   <p class="note">The second, independent movement: the original deposit goes to the staging server's <strong>archive area</strong>, and only then may its vendor originals be deleted here. It runs beside conversion and shares nothing with the hand-off above — a file in one area does not count as uploaded in the other. A dataset is archived whatever its conversion state; what the conversion state gates is the local <em>delete</em>, because a raw we have not converted yet is the only thing that can still produce an open file, and the archive offers no download.</p>
   <div class="grid">
-    <div class="card is-ready"><span class="k">32,473</span><div class="t">files archived · 0.58 TB</div>
-      <div class="foot">70 datasets · 3.9% of the 14.4 TB still held locally</div></div>
+    <div class="card is-ready"><span class="k">33,665</span><div class="t">files archived · 0.74 TB</div>
+      <div class="foot">71 datasets · 4.9% of the 14.3 TB still held locally</div></div>
     <div class="card"><span class="k">1,603</span><div class="t">vendor acquisitions deleted · 224.18 GiB</div>
       <div class="foot">removed only after the archive confirmed every file</div></div>
-    <div class="card"><span class="k">25,183</span><div class="t">files held back · 24 datasets</div>
+    <div class="card"><span class="k">26,374</span><div class="t">files held back · 25 datasets</div>
       <div class="foot">archived, but raws kept — conversion incomplete or failing</div></div>
   </div>
   <div class="meter" style="margin-top:14px">
@@ -287,7 +287,7 @@
   </div>
   <div class="fb-plot">
     <div class="fb-y"><span class="fb-y2"></span><span class="fb-y1"></span><span>0</span></div>
-    <div class="fb-bars"><div class="fb" data-hour="47" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="46" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="45" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="44" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="43" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="42" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">42</span></div><div class="fb" data-hour="41" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="40" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="39" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="38" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="37" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="36" data-b="0" data-f="0" data-d="6"><div class="fb-col"><i></i></div><span class="fb-lab">36</span></div><div class="fb" data-hour="35" data-b="0" data-f="0" data-d="3"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="34" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="33" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="32" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="31" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="30" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">30</span></div><div class="fb" data-hour="29" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="28" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="27" data-b="2930275585" data-f="451" data-d="6"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="26" data-b="13556298863" data-f="133" data-d="8"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="25" data-b="5795124231" data-f="41" data-d="4"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="24" data-b="16616550844" data-f="214" data-d="5"><div class="fb-col"><i></i></div><span class="fb-lab">24</span></div><div class="fb" data-hour="23" data-b="10355857578" data-f="510" data-d="9"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="22" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="21" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="20" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="19" data-b="8282772" data-f="9" data-d="2"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="18" data-b="40325719350" data-f="337" data-d="1"><div class="fb-col"><i></i></div><span class="fb-lab">18</span></div><div class="fb" data-hour="17" data-b="34807499297" data-f="291" data-d="3"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="16" data-b="33662700769" data-f="220" data-d="4"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="15" data-b="36047494795" data-f="150" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="14" data-b="35965360237" data-f="150" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="13" data-b="63088258276" data-f="289" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="12" data-b="51560466472" data-f="368" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">12</span></div><div class="fb" data-hour="11" data-b="41827662822" data-f="301" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="10" data-b="44120016092" data-f="292" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="9" data-b="70843116121" data-f="367" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="8" data-b="55516389544" data-f="222" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="7" data-b="71050710215" data-f="344" data-d="1"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="6" data-b="56215406140" data-f="492" data-d="1"><div class="fb-col"><i></i></div><span class="fb-lab">6</span></div><div class="fb" data-hour="5" data-b="62104082800" data-f="554" data-d="9"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="4" data-b="0" data-f="3" data-d="2"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="3" data-b="28281313741" data-f="561" data-d="6"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="2" data-b="55045495815" data-f="404" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="1" data-b="49642473428" data-f="400" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="0" data-b="19052457503" data-f="131" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">0</span></div></div>
+    <div class="fb-bars"><div class="fb" data-hour="47" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="46" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="45" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="44" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="43" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="42" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">42</span></div><div class="fb" data-hour="41" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="40" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="39" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="38" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="37" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="36" data-b="0" data-f="0" data-d="6"><div class="fb-col"><i></i></div><span class="fb-lab">36</span></div><div class="fb" data-hour="35" data-b="0" data-f="0" data-d="3"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="34" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="33" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="32" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="31" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="30" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">30</span></div><div class="fb" data-hour="29" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="28" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="27" data-b="2930275585" data-f="451" data-d="6"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="26" data-b="13556298863" data-f="133" data-d="8"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="25" data-b="5795124231" data-f="41" data-d="4"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="24" data-b="16616550844" data-f="214" data-d="5"><div class="fb-col"><i></i></div><span class="fb-lab">24</span></div><div class="fb" data-hour="23" data-b="10355857578" data-f="510" data-d="9"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="22" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="21" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="20" data-b="0" data-f="0" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="19" data-b="8282772" data-f="9" data-d="2"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="18" data-b="40325719350" data-f="337" data-d="1"><div class="fb-col"><i></i></div><span class="fb-lab">18</span></div><div class="fb" data-hour="17" data-b="34807499297" data-f="291" data-d="3"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="16" data-b="33662700769" data-f="220" data-d="4"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="15" data-b="36047494795" data-f="150" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="14" data-b="35965360237" data-f="150" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="13" data-b="63088258276" data-f="289" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="12" data-b="51560466472" data-f="368" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">12</span></div><div class="fb" data-hour="11" data-b="41827662822" data-f="301" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="10" data-b="44120016092" data-f="292" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="9" data-b="70843116121" data-f="367" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="8" data-b="55516389544" data-f="222" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="7" data-b="71050710215" data-f="344" data-d="1"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="6" data-b="56215406140" data-f="492" data-d="1"><div class="fb-col"><i></i></div><span class="fb-lab">6</span></div><div class="fb" data-hour="5" data-b="62104082800" data-f="554" data-d="9"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="4" data-b="0" data-f="3" data-d="2"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="3" data-b="28281313741" data-f="561" data-d="6"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="2" data-b="55045495815" data-f="404" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="1" data-b="49642473428" data-f="400" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="0" data-b="55827517828" data-f="388" data-d="1"><div class="fb-col"><i></i></div><span class="fb-lab">0</span></div></div>
   </div>
   <p class="fb-unit"></p>
 </div>
@@ -330,8 +330,8 @@
 })();
 </script>
     <div class="legend">
-      <span><b>7,234 files</b> sent over the last 48 hours</span>
-      <span><b>836.7 GiB</b> · 70 datasets completed</span>
+      <span><b>7,491 files</b> sent over the last 48 hours</span>
+      <span><b>871.0 GiB</b> · 71 datasets completed</span>
       <span class="dim">hourly buckets, newest at the right · the 0 bucket is still filling</span>
     </div>
   </div>
@@ -344,12 +344,12 @@
   <div class="vol">
     <p class="lab">Botnet pool · <code>data-download</code> · 21,330 GiB total</p>
     <div class="track">
-      <div class="used" style="width:76.9%"></div>
-      <div class="floor" style="width:23.1%"></div>
+      <div class="used" style="width:77.0%"></div>
+      <div class="floor" style="width:23.0%"></div>
       <div class="avail" style="width:0.0%"></div>
     </div>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--ink-3)"></span><b>16,411 GiB</b> used</span>
+      <span><span class="swatch" style="background:var(--ink-3)"></span><b>16,421 GiB</b> used</span>
       <span><span class="swatch" style="background:var(--blocked)"></span><b>5,120 GiB</b> reserved floor</span>
       <span><span class="swatch" style="background:var(--accent)"></span><b>0 GiB</b> above the floor — downloads need 200 GiB of this before they will start</span>
     </div>
@@ -358,21 +358,21 @@
   <div class="vol">
     <p class="lab">gscratch · <code>data-ready</code> · 3,597 GiB total, shared</p>
     <div class="track">
-      <div class="used" style="width:98.4%"></div>
+      <div class="used" style="width:98.8%"></div>
       <div class="floor" style="width:0.6%"></div>
-      <div class="avail" style="width:1.0%"></div>
+      <div class="avail" style="width:0.6%"></div>
     </div>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--ink-3)"></span><b>3,541 GiB</b> used — mostly other people's data</span>
+      <span><span class="swatch" style="background:var(--ink-3)"></span><b>3,555 GiB</b> used — mostly other people's data</span>
       <span><span class="swatch" style="background:var(--blocked)"></span><b>20 GiB</b> conversion floor + reserve</span>
-      <span><span class="swatch" style="background:var(--accent)"></span><b>36 GiB</b> conversion may still use</span>
+      <span><span class="swatch" style="background:var(--accent)"></span><b>22 GiB</b> conversion may still use</span>
     </div>
   </div>
 </section>
 
 <section>
   <h2>The five stages</h2>
-  <p class="note">The backlog in files, which is the unit everything here is measured in — one dataset can be a single acquisition or several thousand, so the dataset count beside each figure is context, not the headline. 208,237 files are accounted for across 13,051 datasets; bars show each stage’s share of those files. Stage&nbsp;1 has no file figure by nature: nothing has been fetched, so nothing is countable yet. Stage&nbsp;5 is a buffer the drain empties every twenty minutes and files leave it continuously, so a small number there means the hand-off is keeping up — the delivered total is in <a href="#flow">Hand-off flow</a> above.</p>
+  <p class="note">The backlog in files, which is the unit everything here is measured in — one dataset can be a single acquisition or several thousand, so the dataset count beside each figure is context, not the headline. 208,240 files are accounted for across 13,051 datasets; bars show each stage’s share of those files. Stage&nbsp;1 has no file figure by nature: nothing has been fetched, so nothing is countable yet. Stage&nbsp;5 is a buffer the drain empties every twenty minutes and files leave it continuously, so a small number there means the hand-off is keeping up — the delivered total is in <a href="#flow">Hand-off flow</a> above.</p>
 
   <div class="stage is-idle">
     <span class="step">1</span>
@@ -426,13 +426,13 @@
       <p class="stage-desc">One open-format file per acquisition in <code>data-ready/</code>, deduplicated against what GNPS2 and WCH already hold. These are waiting for the next drain pass, not for a person; once WCH confirms them byte for byte they are deleted here and counted as delivered.</p>
       <div class="bar"><i style="width:0.0%"></i></div>
     </div>
-    <div class="count"><span class="k">12</span><span class="of">files awaiting push · 0.0% of files</span></div>
+    <div class="count"><span class="k">15</span><span class="of">files awaiting push · 0.0% of files</span></div>
     <div class="count sec"><span class="k">2</span><span class="of">datasets · 0.0%</span></div>
   </div>
 
   <div class="after">
-    <strong>In the buffer right now:</strong> 0.06 TB once symlinks are followed —
-    0.06 TB of files we converted and 0.00 TB of open-format files
+    <strong>In the buffer right now:</strong> 0.08 TB once symlinks are followed —
+    0.08 TB of files we converted and 0.00 TB of open-format files
     symlinked back into <code>data-download/</code>. This figure is meant to stay small: it is
     what the drain has not yet moved, not the size of the corpus.
   </div>
@@ -453,7 +453,7 @@
         <tr><td>Everything else <span class="dim">· 480 delivered earlier</span></td><td class="n">—</td><td class="n">1,099<span class="n2">53 ds</span></td><td class="n">99,293<span class="n2">442 ds</span></td><td class="n">4,021<span class="n2">21 ds</span></td><td class="n">3,258<span class="n2">72 ds</span></td><td class="n">—<span class="n2">629 ds</span></td><td class="n">107,671<span class="n2">1,217 ds</span></td></tr>
         <tr><td>Zip-only, spectral inside</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—<span class="n2">1 ds</span></td><td class="n">0<span class="n2">1 ds</span></td></tr>
         <tr><td>Staged by earlier work</td><td class="n">—</td><td class="n">220<span class="n2">17 ds</span></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">220<span class="n2">17 ds</span></td></tr>
-        <tr class="total"><td>Total</td><td class="n">12<span class="n2">2 ds</span></td><td class="n">1,319<span class="n2">125 ds</span></td><td class="n">194,622<span class="n2">879 ds</span></td><td class="n">8,331<span class="n2">55 ds</span></td><td class="n">3,953<span class="n2">100 ds</span></td><td class="n">—<span class="n2">11,891 ds</span></td><td class="n">208,225<span class="n2">13,051 ds</span></td></tr>
+        <tr class="total"><td>Total</td><td class="n">15<span class="n2">2 ds</span></td><td class="n">1,319<span class="n2">125 ds</span></td><td class="n">194,622<span class="n2">879 ds</span></td><td class="n">8,331<span class="n2">55 ds</span></td><td class="n">3,953<span class="n2">100 ds</span></td><td class="n">—<span class="n2">11,891 ds</span></td><td class="n">208,225<span class="n2">13,051 ds</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -469,7 +469,7 @@
         <tr><td>MassIVE</td><td class="n">—</td><td class="n">1,099<span class="n2">26 ds</span></td><td class="n">70,592<span class="n2">408 ds</span></td><td class="n">2,389<span class="n2">7 ds</span></td><td class="n">3,258<span class="n2">59 ds</span></td><td class="n">—<span class="n2">4,877 ds</span></td><td class="n">90,978</td></tr>
         <tr><td>Workbench</td><td class="n">—</td><td class="n">0<span class="n2">29 ds</span></td><td class="n">79,248<span class="n2">194 ds</span></td><td class="n">1<span class="n2">3 ds</span></td><td class="n">695<span class="n2">35 ds</span></td><td class="n">—<span class="n2">4,255 ds</span></td><td class="n">85,407</td></tr>
         <tr><td>MetaboLights</td><td class="n">0<span class="n2">1 ds</span></td><td class="n">0<span class="n2">53 ds</span></td><td class="n">44,782<span class="n2">277 ds</span></td><td class="n">5,941<span class="n2">45 ds</span></td><td class="n">0<span class="n2">6 ds</span></td><td class="n">—<span class="n2">2,759 ds</span></td><td class="n">61,372</td></tr>
-        <tr class="total"><td>Total</td><td class="n">12<span class="n2">2 ds</span></td><td class="n">1,319<span class="n2">125 ds</span></td><td class="n">194,622<span class="n2">879 ds</span></td><td class="n">8,331<span class="n2">55 ds</span></td><td class="n">3,953<span class="n2">100 ds</span></td><td class="n">—<span class="n2">11,891 ds</span></td><td class="n">237,757</td></tr>
+        <tr class="total"><td>Total</td><td class="n">15<span class="n2">2 ds</span></td><td class="n">1,319<span class="n2">125 ds</span></td><td class="n">194,622<span class="n2">879 ds</span></td><td class="n">8,331<span class="n2">55 ds</span></td><td class="n">3,953<span class="n2">100 ds</span></td><td class="n">—<span class="n2">11,891 ds</span></td><td class="n">237,757</td></tr>
       </tbody>
     </table>
   </div>
@@ -478,7 +478,7 @@
 <section>
   <h2>How acquisitions reach <code>data-ready</code></h2>
   <p class="note"><strong>These five figures cover the whole <code>data-ready</code> folder — 1,319 acquisitions — not just this run.</strong>
-  220 of them were staged by earlier work outside the 13,051-dataset priority list and 1,099 belong to it; 12 are still in the buffer, the rest already went to WCH. Most acquisitions need no conversion at all — an open-format file is symlinked, costing no disk and no compute. Only vendor formats are converted, and that is where the time goes.</p>
+  220 of them were staged by earlier work outside the 13,051-dataset priority list and 1,099 belong to it; 15 are still in the buffer, the rest already went to WCH. Most acquisitions need no conversion at all — an open-format file is symlinked, costing no disk and no compute. Only vendor formats are converted, and that is where the time goes.</p>
   <div class="grid">
     <div class="card"><span class="k">1,319</span><div class="t">Symlinked, already open format</div><div class="foot">no conversion needed</div></div>
     <div class="card"><span class="k">0</span><div class="t">ThermoRawFileParser</div><div class="foot">~30 s per file</div></div>
