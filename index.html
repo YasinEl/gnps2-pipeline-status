@@ -160,24 +160,24 @@
 <header>
   <p class="lab">Repository → GNPS2 acquisition</p>
   <h1>GNPS2 Corpus Pipeline</h1>
-  <p class="sub">Download → unpack → convert → hand off mz(x)ML to WCH → archive the rest → delete locally once confirmed. <strong>3,767,958 files</strong> fetched across 13,463 datasets.</p>
-  <p class="stamp">Snapshot 2026-11-09 11:28 CET · downloads: MassIVE, MetaboLights, Workbench · scratch 614 GiB · conversion: running</p>
+  <p class="sub">Download → unpack → convert → hand off mz(x)ML to WCH → archive the rest → delete locally once confirmed. <strong>3,142,846 files</strong> fetched across 13,463 datasets.</p>
+  <p class="stamp">Snapshot 2026-11-09 12:01 CET · downloads: MassIVE, MetaboLights, Workbench · scratch 614 GiB · conversion: running</p>
 </header>
 
 
 
-<section id="last"><h2>Last time each step ran</h2><div class="scroll"><table><thead><tr><th>Step</th><th class="n">When</th><th class="n"></th><th>Last item</th></tr></thead><tbody><tr><td>Checked repositories for new datasets</td><td class="n">2026-11-07 13:30</td><td class="n">46 h ago</td><td>32 new found · runs every 2 days</td></tr><tr><td>Dataset finished downloading</td><td class="n">2026-11-09 11:16</td><td class="n">12 min ago</td><td>MSV000085795</td></tr><tr><td>File converted to mzML</td><td class="n">2026-11-09 11:26</td><td class="n">2 min ago</td><td></td></tr><tr><td>mz(x)ML handed off to WCH</td><td class="n">2026-11-09 11:16</td><td class="n">12 min ago</td><td>metabolights/MTBLS636</td></tr><tr><td>allDone.txt placed</td><td class="n">2026-11-09 10:50</td><td class="n">38 min ago</td><td>workbench/ST002611</td></tr><tr><td>Vendor/original files archived</td><td class="n">2026-11-09 10:52</td><td class="n">36 min ago</td><td>massive/MSV000081659</td></tr><tr><td>Local copy deleted after archive</td><td class="n">2026-11-09 10:56</td><td class="n">32 min ago</td><td>massive/MSV000081659 · 1 MB</td></tr><tr><td>Daily delete sweep finished</td><td class="n">2026-11-08 13:38</td><td class="n">22 h ago</td><td>runs daily</td></tr></tbody></table></div></section>
+<section id="last"><h2>Last time each step ran</h2><div class="scroll"><table><thead><tr><th>Step</th><th class="n">When</th><th class="n"></th><th>Last item</th></tr></thead><tbody><tr><td>Checked repositories for new datasets</td><td class="n">2026-11-07 13:30</td><td class="n">47 h ago</td><td>32 new found · runs every 2 days</td></tr><tr><td>Dataset finished downloading</td><td class="n">2026-11-09 11:16</td><td class="n">45 min ago</td><td>MSV000085795</td></tr><tr><td>File converted to mzML</td><td class="n">2026-11-09 11:26</td><td class="n">34 min ago</td><td></td></tr><tr><td>mz(x)ML handed off to WCH</td><td class="n">2026-11-09 11:16</td><td class="n">44 min ago</td><td>metabolights/MTBLS636</td></tr><tr><td>allDone.txt placed</td><td class="n">2026-11-09 10:50</td><td class="n">1 h ago</td><td>workbench/ST002611</td></tr><tr><td>Vendor/original files archived</td><td class="n">2026-11-09 11:57</td><td class="n">3 min ago</td><td>massive/MSV000095143</td></tr><tr><td>Local copy deleted after archive</td><td class="n">2026-11-09 12:00</td><td class="n">1 min ago</td><td>massive/MSV000095143 · 1 MB</td></tr><tr><td>Daily delete sweep finished</td><td class="n">2026-11-08 13:38</td><td class="n">22 h ago</td><td>runs daily</td></tr></tbody></table></div></section>
 
 <section id="flow">
   <h2>Hand-off flow</h2>
   <p class="note">Open files go to WCH and are deleted here once confirmed; vendor originals are deleted once the archive holds them and their conversions are delivered.</p>
   <div class="grid">
-    <div class="card"><span class="k">3,939,486</span><div class="t">files held locally · 32.7 TB</div>
-      <div class="foot">10,126 datasets · held until archived and delivered · measured 00:59</div></div>
-    <div class="card"><span class="k">53,984</span><div class="t">files converted, awaiting push · 1.11 TB</div>
+    <div class="card"><span class="k">3,314,374</span><div class="t">files held locally · 31.6 TB</div>
+      <div class="foot">10,126 datasets · held until archived and delivered · measured 02:30</div></div>
+    <div class="card"><span class="k">53,844</span><div class="t">files converted, awaiting push · 1.11 TB</div>
       <div class="foot">in <code>data-ready</code> on scratch across 154 datasets, counted on disk · 19,852 of them KMAP/MassBank, which WCH does not accept yet (HTTP 400)</div></div>
-    <div class="card is-ready"><span class="k">565,308</span><div class="t">files delivered to WCH</div>
-      <div class="foot">confirmed on the staging server · 2,553 datasets</div></div>
+    <div class="card is-ready"><span class="k">565,667</span><div class="t">files delivered to WCH</div>
+      <div class="foot">confirmed on the staging server · 2,554 datasets</div></div>
     <div class="card"><span class="k">265,587</span><div class="t">files reclaimed · 13.22 TiB</div>
       <div class="foot">deleted here after WCH verified them · 3,280 datasets</div></div>
   </div>
@@ -248,9 +248,9 @@
     <div class="card"><span class="t" style="display:block;margin-bottom:6px">Converting</span>
       <div class="foot" style="font-size:13px">nothing in conversion</div></div>
     <div class="card"><span class="t" style="display:block;margin-bottom:6px">Handing off to WCH</span>
-      <div class="foot" style="font-size:13px">massive/MSV000092098 — 56 files / 0.0 GiB pushed this pass, 33,083 files / 1.6 GiB of it still in data-ready · whole pass so far 70 files / 0.0 GiB · last file 0 min ago</div></div>
+      <div class="foot" style="font-size:13px">no file being pushed this minute (the hand-off loop runs without pause and looks for newly staged files every minute)</div></div>
     <div class="card"><span class="t" style="display:block;margin-bottom:6px">Uploading to the archive</span>
-      <div class="foot" style="font-size:13px">massive/MSV000081669 — 12 files / 0.0 of 8.2 GiB (0%), 8.2 GiB to go · last file 0 min ago</div></div>
+      <div class="foot" style="font-size:13px">massive/MSV000081669 — 248 files / 0.7 of 8.2 GiB (8%), 7.6 GiB to go · last file 0 min ago</div></div>
   </div>
 </section>
 
@@ -725,9 +725,9 @@ Mon 09 Nov, 08:38 CET</title></circle></svg><div class="legend" style="margin-to
   <h2>Archive hand-off <span style="font-weight:400;color:var(--ink-3)">· vendor originals</span></h2>
   <p class="note">Each deposit is pushed to the WCH archive area; its files are deleted here only after the archive confirms them and every conversion has been delivered.</p>
   <div class="grid">
-    <div class="card is-ready"><span class="k">58,679,577</span><div class="t">files archived · 383.98 TB</div>
-      <div class="foot">418,852 datasets · 1173.6% of the 0.0 TB still held locally</div></div>
-    <div class="card"><span class="k">142,580</span><div class="t">vendor acquisitions deleted · 17843.89 GiB</div>
+    <div class="card is-ready"><span class="k">58,680,829</span><div class="t">files archived · 384.29 TB</div>
+      <div class="foot">418,853 datasets · 1214.5% of the 0.0 TB still held locally</div></div>
+    <div class="card"><span class="k">143,827</span><div class="t">vendor acquisitions deleted · 18129.93 GiB</div>
       <div class="foot">removed only after the archive confirmed every file</div></div>
     <div class="card"><span class="k">85,936</span><div class="t">files held back · 36,257 datasets</div>
       <div class="foot">archived, but raws kept — conversion incomplete or failing</div></div>
@@ -742,7 +742,7 @@ Mon 09 Nov, 08:38 CET</title></circle></svg><div class="legend" style="margin-to
   </div>
   <div class="fb-plot">
     <div class="fb-y"><span class="fb-y2"></span><span class="fb-y1"></span><span>0</span></div>
-    <div class="fb-bars"><div class="fb" data-hour="47" data-b="58385033785" data-f="285" data-d="761"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="46" data-b="39701059613" data-f="4650" data-d="490"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="45" data-b="24103984505" data-f="5339" data-d="468"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="44" data-b="6810438064" data-f="3689" data-d="466"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="43" data-b="10357193209" data-f="5302" data-d="467"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="42" data-b="10618916491" data-f="5904" data-d="665"><div class="fb-col"><i></i></div><span class="fb-lab">42</span></div><div class="fb" data-hour="41" data-b="11210073437" data-f="5850" data-d="739"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="40" data-b="9666960247" data-f="5916" data-d="664"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="39" data-b="11916376540" data-f="6165" data-d="617"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="38" data-b="15655620907" data-f="7097" data-d="442"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="37" data-b="31516100716" data-f="9223" data-d="618"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="36" data-b="31839187267" data-f="7815" data-d="522"><div class="fb-col"><i></i></div><span class="fb-lab">36</span></div><div class="fb" data-hour="35" data-b="31676365569" data-f="6533" data-d="848"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="34" data-b="30224998158" data-f="4225" data-d="503"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="33" data-b="46079196304" data-f="5971" data-d="838"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="32" data-b="23673442865" data-f="2270" data-d="736"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="31" data-b="16125969389" data-f="1244" data-d="770"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="30" data-b="22378644292" data-f="1387" data-d="940"><div class="fb-col"><i></i></div><span class="fb-lab">30</span></div><div class="fb" data-hour="29" data-b="39964385290" data-f="3802" data-d="689"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="28" data-b="28297609762" data-f="1167" data-d="723"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="27" data-b="22262018991" data-f="1033" data-d="632"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="26" data-b="41561505491" data-f="2255" data-d="296"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="25" data-b="10427221365" data-f="3254" data-d="1"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="24" data-b="13131206425" data-f="2470" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">24</span></div><div class="fb" data-hour="23" data-b="47909552919" data-f="2211" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="22" data-b="29395378435" data-f="1812" data-d="13"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="21" data-b="23394781229" data-f="6088" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="20" data-b="30790377334" data-f="6323" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="19" data-b="36971109943" data-f="7125" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="18" data-b="30810440044" data-f="4915" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">18</span></div><div class="fb" data-hour="17" data-b="23303026259" data-f="4392" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="16" data-b="32137680854" data-f="5849" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="15" data-b="27862567486" data-f="5643" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="14" data-b="29172260598" data-f="5500" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="13" data-b="23881840480" data-f="5037" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="12" data-b="35016082898" data-f="5840" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">12</span></div><div class="fb" data-hour="11" data-b="41645221156" data-f="6396" data-d="1"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="10" data-b="32750399775" data-f="1060" data-d="4"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="9" data-b="35027225955" data-f="322" data-d="3"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="8" data-b="49451349118" data-f="339" data-d="3"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="7" data-b="67892532360" data-f="330" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="6" data-b="44962188664" data-f="395" data-d="4"><div class="fb-col"><i></i></div><span class="fb-lab">6</span></div><div class="fb" data-hour="5" data-b="43665249804" data-f="503" data-d="2"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="4" data-b="38928801571" data-f="2780" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="3" data-b="37199082392" data-f="2895" data-d="1"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="2" data-b="40493015311" data-f="2549" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="1" data-b="21573276443" data-f="1192" data-d="1"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="0" data-b="15403229968" data-f="1020" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">0</span></div></div>
+    <div class="fb-bars"><div class="fb" data-hour="47" data-b="58385033785" data-f="285" data-d="761"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="46" data-b="39701059613" data-f="4650" data-d="490"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="45" data-b="24103984505" data-f="5339" data-d="468"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="44" data-b="6810438064" data-f="3689" data-d="466"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="43" data-b="10357193209" data-f="5302" data-d="467"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="42" data-b="10618916491" data-f="5904" data-d="665"><div class="fb-col"><i></i></div><span class="fb-lab">42</span></div><div class="fb" data-hour="41" data-b="11210073437" data-f="5850" data-d="739"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="40" data-b="9666960247" data-f="5916" data-d="664"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="39" data-b="11916376540" data-f="6165" data-d="617"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="38" data-b="15655620907" data-f="7097" data-d="442"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="37" data-b="31516100716" data-f="9223" data-d="618"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="36" data-b="31839187267" data-f="7815" data-d="522"><div class="fb-col"><i></i></div><span class="fb-lab">36</span></div><div class="fb" data-hour="35" data-b="31676365569" data-f="6533" data-d="848"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="34" data-b="30224998158" data-f="4225" data-d="503"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="33" data-b="46079196304" data-f="5971" data-d="838"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="32" data-b="23673442865" data-f="2270" data-d="736"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="31" data-b="16125969389" data-f="1244" data-d="770"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="30" data-b="22378644292" data-f="1387" data-d="940"><div class="fb-col"><i></i></div><span class="fb-lab">30</span></div><div class="fb" data-hour="29" data-b="39964385290" data-f="3802" data-d="689"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="28" data-b="28297609762" data-f="1167" data-d="723"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="27" data-b="22262018991" data-f="1033" data-d="632"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="26" data-b="41561505491" data-f="2255" data-d="296"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="25" data-b="10427221365" data-f="3254" data-d="1"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="24" data-b="13131206425" data-f="2470" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">24</span></div><div class="fb" data-hour="23" data-b="47909552919" data-f="2211" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="22" data-b="29395378435" data-f="1812" data-d="13"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="21" data-b="23394781229" data-f="6088" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="20" data-b="30790377334" data-f="6323" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="19" data-b="36971109943" data-f="7125" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="18" data-b="30810440044" data-f="4915" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">18</span></div><div class="fb" data-hour="17" data-b="23303026259" data-f="4392" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="16" data-b="32137680854" data-f="5849" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="15" data-b="27862567486" data-f="5643" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="14" data-b="29172260598" data-f="5500" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="13" data-b="23881840480" data-f="5037" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="12" data-b="35016082898" data-f="5840" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab">12</span></div><div class="fb" data-hour="11" data-b="41645221156" data-f="6396" data-d="1"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="10" data-b="32750399775" data-f="1060" data-d="4"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="9" data-b="35027225955" data-f="322" data-d="3"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="8" data-b="49451349118" data-f="339" data-d="3"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="7" data-b="67892532360" data-f="330" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="6" data-b="44962188664" data-f="395" data-d="4"><div class="fb-col"><i></i></div><span class="fb-lab">6</span></div><div class="fb" data-hour="5" data-b="43665249804" data-f="503" data-d="2"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="4" data-b="38928801571" data-f="2780" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="3" data-b="37199082392" data-f="2895" data-d="1"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="2" data-b="40493015311" data-f="2549" data-d="0"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="1" data-b="21573276443" data-f="1192" data-d="1"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="0" data-b="32469210862" data-f="2473" data-d="1"><div class="fb-col"><i></i></div><span class="fb-lab">0</span></div></div>
   </div>
   <p class="fb-unit"></p>
 </div>
@@ -785,8 +785,8 @@ Mon 09 Nov, 08:38 CET</title></circle></svg><div class="legend" style="margin-to
 })();
 </script>
     <div class="legend">
-      <span><b>183,362 files</b> sent over the last 48 hours</span>
-      <span><b>1329.2 GiB</b> · 13,927 datasets completed</span>
+      <span><b>184,815 files</b> sent over the last 48 hours</span>
+      <span><b>1345.1 GiB</b> · 13,928 datasets completed</span>
       <span class="dim">hourly buckets, newest at the right · the 0 bucket is still filling</span>
     </div>
   </div>
@@ -797,16 +797,16 @@ Mon 09 Nov, 08:38 CET</title></circle></svg><div class="legend" style="margin-to
   <p class="note">New downloads go to gscratch and leave it as they are archived and delivered; downloads pause 100 GiB above empty, because the volume is shared. Botnet holds earlier downloads and only empties.</p>
 
   <div class="vol">
-    <p class="lab">Botnet pool · <code>data-download</code> · 27,840 GiB total</p>
+    <p class="lab">Botnet pool · <code>data-download</code> · 27,838 GiB total</p>
     <div class="track">
       <div class="used" style="width:30.3%"></div>
       <div class="floor" style="width:18.4%"></div>
       <div class="avail" style="width:51.3%"></div>
     </div>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--ink-3)"></span><b>8,442 GiB</b> used</span>
+      <span><span class="swatch" style="background:var(--ink-3)"></span><b>8,443 GiB</b> used</span>
       <span><span class="swatch" style="background:var(--blocked)"></span><b>5,120 GiB</b> reserved floor</span>
-      <span><span class="swatch" style="background:var(--accent)"></span><b>14,279 GiB</b> above the floor (no new downloads here)</span>
+      <span><span class="swatch" style="background:var(--accent)"></span><b>14,275 GiB</b> above the floor (no new downloads here)</span>
     </div>
   </div>
 
@@ -818,7 +818,7 @@ Mon 09 Nov, 08:38 CET</title></circle></svg><div class="legend" style="margin-to
       <div class="avail" style="width:1.9%"></div>
     </div>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--ink-3)"></span><b>30,906 GiB</b> used — mostly other people's data</span>
+      <span><span class="swatch" style="background:var(--ink-3)"></span><b>30,907 GiB</b> used — mostly other people's data</span>
       <span><span class="swatch" style="background:var(--blocked)"></span><b>20 GiB</b> conversion floor + reserve</span>
       <span><span class="swatch" style="background:var(--accent)"></span><b>594 GiB</b> conversion may still use</span>
     </div>
@@ -827,7 +827,7 @@ Mon 09 Nov, 08:38 CET</title></circle></svg><div class="legend" style="margin-to
 
 <section>
   <h2>The five stages</h2>
-  <p class="note">2,923,379 files across 13,463 datasets; bars are each stage’s share of files.</p>
+  <p class="note">2,344,787 files across 13,463 datasets; bars are each stage’s share of files.</p>
 
   <div class="stage is-idle">
     <span class="step">1</span>
@@ -837,7 +837,7 @@ Mon 09 Nov, 08:38 CET</title></circle></svg><div class="legend" style="margin-to
       <div class="bar"><i style="width:0%"></i></div>
     </div>
     <div class="count"><span class="k">—</span><span class="of">files</span></div>
-    <div class="count sec"><span class="k">3,476</span><span class="of">datasets · 25.8%</span></div>
+    <div class="count sec"><span class="k">3,475</span><span class="of">datasets · 25.8%</span></div>
   </div>
 
   <div class="stage is-pending">
@@ -845,21 +845,21 @@ Mon 09 Nov, 08:38 CET</title></circle></svg><div class="legend" style="margin-to
     <div>
       <p class="stage-name">Downloading &amp; unpacking</p>
       <p class="stage-desc">In the download streams; files landed so far.</p>
-      <div class="bar"><i style="width:0.5%"></i></div>
+      <div class="bar"><i style="width:0.6%"></i></div>
     </div>
-    <div class="count"><span class="k">14,945</span><span class="of">files on disk · 0.5% of files</span></div>
-    <div class="count sec"><span class="k">644</span><span class="of">datasets · 4.8%</span></div>
+    <div class="count"><span class="k">14,845</span><span class="of">files on disk · 0.6% of files</span></div>
+    <div class="count sec"><span class="k">640</span><span class="of">datasets · 4.8%</span></div>
   </div>
-  <div class="after"><strong>Done, nothing to deliver — 6,223 datasets with nothing to convert or hand off.</strong> <ul style="margin:8px 0 0;padding-left:18px"><li><strong>3,549 · every run already on GNPS2: done (what we hold is archived, then deleted)</strong> <span class="pill p-accent">done</span><br><code>MSV000078557</code>, <code>MSV000078561</code>, <code>MSV000078565</code>, <code>MSV000078570</code>, <code>MSV000078583</code>, <code>MSV000078584</code>, <code>MSV000078589</code>, <code>MSV000078590</code>, <code>MSV000078593</code>, <code>MSV000078595</code> and 3539 more</li><li><strong>435 · no MS acquisitions in the deposit: done (archived, then deleted)</strong> <span class="pill p-accent">done</span><br><code>KAP240404</code>, <code>KAP240544</code>, <code>KAP240584</code>, <code>KAP240681</code>, <code>KAP240682</code>, <code>KAP240812</code>, <code>KAP241503</code>, <code>KAP241740</code>, <code>KAP241765</code>, <code>KAP241861</code> and 425 more</li><li><strong>2,232 · repository has no files / no raw data: done (re-checked at every discovery pass)</strong> <span class="pill p-accent">done</span><br><code>MSV000078549</code>, <code>MSV000095659</code>, <code>MSV000096562</code>, <code>MSV000096718</code>, <code>MSV000096810</code>, <code>MSV000097403</code>, <code>MSV000097682</code>, <code>MSV000098316</code>, <code>MSV000098368</code>, <code>MSV000098446</code> and 2222 more</li><li><strong>6 · not public on EBI: done (re-checked at every discovery pass)</strong> <span class="pill p-accent">done</span><br><code>MTBLS10951</code>, <code>MTBLS12999</code>, <code>MTBLS13285</code>, <code>MTBLS13389</code>, <code>MTBLS14493</code>, <code>MTBLS14928</code></li><li><strong>1 · extraction held for manual review</strong> <span class="pill p-blocked">needs action</span><br><code>ST001889</code></li></ul></div>
+  <div class="after"><strong>Done, nothing to deliver — 6,227 datasets with nothing to convert or hand off.</strong> <ul style="margin:8px 0 0;padding-left:18px"><li><strong>3,549 · every run already on GNPS2: done (what we hold is archived, then deleted)</strong> <span class="pill p-accent">done</span><br><code>MSV000078557</code>, <code>MSV000078561</code>, <code>MSV000078565</code>, <code>MSV000078570</code>, <code>MSV000078583</code>, <code>MSV000078584</code>, <code>MSV000078589</code>, <code>MSV000078590</code>, <code>MSV000078593</code>, <code>MSV000078595</code> and 3539 more</li><li><strong>439 · no MS acquisitions in the deposit: done (archived, then deleted)</strong> <span class="pill p-accent">done</span><br><code>KAP240404</code>, <code>KAP240544</code>, <code>KAP240584</code>, <code>KAP240681</code>, <code>KAP240682</code>, <code>KAP240812</code>, <code>KAP241503</code>, <code>KAP241740</code>, <code>KAP241765</code>, <code>KAP241861</code> and 429 more</li><li><strong>2,232 · repository has no files / no raw data: done (re-checked at every discovery pass)</strong> <span class="pill p-accent">done</span><br><code>MSV000078549</code>, <code>MSV000095659</code>, <code>MSV000096562</code>, <code>MSV000096718</code>, <code>MSV000096810</code>, <code>MSV000097403</code>, <code>MSV000097682</code>, <code>MSV000098316</code>, <code>MSV000098368</code>, <code>MSV000098446</code> and 2222 more</li><li><strong>6 · not public on EBI: done (re-checked at every discovery pass)</strong> <span class="pill p-accent">done</span><br><code>MTBLS10951</code>, <code>MTBLS12999</code>, <code>MTBLS13285</code>, <code>MTBLS13389</code>, <code>MTBLS14493</code>, <code>MTBLS14928</code></li><li><strong>1 · extraction held for manual review</strong> <span class="pill p-blocked">needs action</span><br><code>ST001889</code></li></ul></div>
 
   <div class="stage is-pending">
     <span class="step">3</span>
     <div>
       <p class="stage-name">Awaiting conversion</p>
       <p class="stage-desc">Downloaded and unpacked, waiting for the converter.</p>
-      <div class="bar"><i style="width:4.7%"></i></div>
+      <div class="bar"><i style="width:5.8%"></i></div>
     </div>
-    <div class="count"><span class="k">136,544</span><span class="of">files on disk · 4.7% of files</span></div>
+    <div class="count"><span class="k">136,544</span><span class="of">files on disk · 5.8% of files</span></div>
     <div class="count sec"><span class="k">174</span><span class="of">datasets · 1.3%</span></div>
   </div>
 
@@ -868,9 +868,9 @@ Mon 09 Nov, 08:38 CET</title></circle></svg><div class="legend" style="margin-to
     <div>
       <p class="stage-name">Partially converted</p>
       <p class="stage-desc">Converted except for some acquisitions (counted here); 6,900 more in these datasets converted fine.</p>
-      <div class="bar"><i style="width:0.4%"></i></div>
+      <div class="bar"><i style="width:0.5%"></i></div>
     </div>
-    <div class="count"><span class="k">11,890</span><span class="of">acquisitions failed · 0.4% of files</span></div>
+    <div class="count"><span class="k">11,890</span><span class="of">acquisitions failed · 0.5% of files</span></div>
     <div class="count sec"><span class="k">187</span><span class="of">datasets · 1.4%</span></div>
   </div>
 
@@ -879,9 +879,9 @@ Mon 09 Nov, 08:38 CET</title></circle></svg><div class="legend" style="margin-to
     <div>
       <p class="stage-name">Converted</p>
       <p class="stage-desc">In <code>data-ready</code>, waiting for the next hand-off pass (every 20 minutes).</p>
-      <div class="bar"><i style="width:1.8%"></i></div>
+      <div class="bar"><i style="width:2.3%"></i></div>
     </div>
-    <div class="count"><span class="k">53,984</span><span class="of">files awaiting push · 1.8% of files</span></div>
+    <div class="count"><span class="k">53,844</span><span class="of">files awaiting push · 2.3% of files</span></div>
     <div class="count sec"><span class="k">154</span><span class="of">datasets · 1.1%</span></div>
   </div>
 
@@ -890,9 +890,9 @@ Mon 09 Nov, 08:38 CET</title></circle></svg><div class="legend" style="margin-to
     <div>
       <p class="stage-name">Delivered</p>
       <p class="stage-desc">Finished: handed off and marked <code>allDone</code> at WCH, or GNPS2 already served all of it. Files still on disk wait only for the archive and delete.</p>
-      <div class="bar"><i style="width:69.2%"></i></div>
+      <div class="bar"><i style="width:61.6%"></i></div>
     </div>
-    <div class="count"><span class="k">2,024,048</span><span class="of">files left on disk · 69.2% of files</span></div>
+    <div class="count"><span class="k">1,445,522</span><span class="of">files left on disk · 61.6% of files</span></div>
     <div class="count sec"><span class="k">2,515</span><span class="of">datasets · 18.7%</span></div>
   </div>
 
@@ -914,7 +914,7 @@ Mon 09 Nov, 08:38 CET</title></circle></svg><div class="legend" style="margin-to
         <tr><td>Everything else <span class="dim">· 480 delivered earlier</span></td><td class="n">523,439<span class="n2">782 ds</span></td><td class="n">8<span class="n2">8 ds</span></td><td class="n">751<span class="n2">20 ds</span></td><td class="n">22,965<span class="n2">37 ds</span></td><td class="n">0<span class="n2">4 ds</span></td><td class="n">3,309<span class="n2">73 ds</span></td><td class="n">—<span class="n2">293 ds</span></td><td class="n">550,472<span class="n2">1,217 ds</span></td></tr>
         <tr><td>Zip-only, spectral inside</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—<span class="n2">1 ds</span></td><td class="n">0<span class="n2">1 ds</span></td></tr>
         <tr><td>Staged by earlier work</td><td class="n">0<span class="n2">10 ds</span></td><td class="n">0<span class="n2">3 ds</span></td><td class="n">220<span class="n2">7 ds</span></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">220<span class="n2">20 ds</span></td></tr>
-        <tr class="total"><td>Total</td><td class="n">2,024,048<span class="n2">2,515 ds</span></td><td class="n">53,984<span class="n2">154 ds</span></td><td class="n">6,470<span class="n2">187 ds</span></td><td class="n">136,544<span class="n2">174 ds</span></td><td class="n">14,945<span class="n2">644 ds</span></td><td class="n">687,388<span class="n2">6,211 ds</span></td><td class="n">—<span class="n2">3,476 ds</span></td><td class="n">2,885,550<span class="n2">13,463 ds</span></td></tr>
+        <tr class="total"><td>Total</td><td class="n">1,445,522<span class="n2">2,515 ds</span></td><td class="n">53,844<span class="n2">154 ds</span></td><td class="n">6,470<span class="n2">187 ds</span></td><td class="n">136,544<span class="n2">174 ds</span></td><td class="n">14,845<span class="n2">640 ds</span></td><td class="n">687,562<span class="n2">6,215 ds</span></td><td class="n">—<span class="n2">3,475 ds</span></td><td class="n">2,307,096<span class="n2">13,463 ds</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -927,12 +927,12 @@ Mon 09 Nov, 08:38 CET</title></circle></svg><div class="legend" style="margin-to
     <table>
       <thead><tr><th>Repository</th><th class="n">Delivered</th><th class="n">Ready</th><th class="n">Partial</th><th class="n">Awaiting</th><th class="n">Downloading</th><th class="n">Done, nothing to deliver</th><th class="n">Not started</th><th class="n">Files on disk</th></tr></thead>
       <tbody>
-        <tr><td>MassIVE</td><td class="n">1,003,821<span class="n2">862 ds</span></td><td class="n">221<span class="n2">72 ds</span></td><td class="n">5,439<span class="n2">143 ds</span></td><td class="n">50,946<span class="n2">80 ds</span></td><td class="n">13,246<span class="n2">128 ds</span></td><td class="n">60,390<span class="n2">3,337 ds</span></td><td class="n">—<span class="n2">790 ds</span></td><td class="n">1,682,825</td></tr>
-        <tr><td>Workbench</td><td class="n">806,776<span class="n2">1,178 ds</span></td><td class="n">8<span class="n2">9 ds</span></td><td class="n">6<span class="n2">17 ds</span></td><td class="n">81,646<span class="n2">78 ds</span></td><td class="n">946<span class="n2">509 ds</span></td><td class="n">557,923<span class="n2">2,349 ds</span></td><td class="n">—<span class="n2">443 ds</span></td><td class="n">1,516,084</td></tr>
-        <tr><td>MetaboLights</td><td class="n">213,451<span class="n2">465 ds</span></td><td class="n">0<span class="n2">4 ds</span></td><td class="n">0<span class="n2">13 ds</span></td><td class="n">3,952<span class="n2">16 ds</span></td><td class="n">39<span class="n2">5 ds</span></td><td class="n">54,187<span class="n2">509 ds</span></td><td class="n">—<span class="n2">2,243 ds</span></td><td class="n">317,141</td></tr>
+        <tr><td>MassIVE</td><td class="n">518,366<span class="n2">862 ds</span></td><td class="n">219<span class="n2">73 ds</span></td><td class="n">5,439<span class="n2">143 ds</span></td><td class="n">50,946<span class="n2">80 ds</span></td><td class="n">13,146<span class="n2">127 ds</span></td><td class="n">60,390<span class="n2">3,337 ds</span></td><td class="n">—<span class="n2">790 ds</span></td><td class="n">1,150,610</td></tr>
+        <tr><td>Workbench</td><td class="n">806,776<span class="n2">1,178 ds</span></td><td class="n">8<span class="n2">9 ds</span></td><td class="n">6<span class="n2">17 ds</span></td><td class="n">81,646<span class="n2">78 ds</span></td><td class="n">946<span class="n2">506 ds</span></td><td class="n">558,097<span class="n2">2,353 ds</span></td><td class="n">—<span class="n2">442 ds</span></td><td class="n">1,516,258</td></tr>
+        <tr><td>MetaboLights</td><td class="n">120,380<span class="n2">465 ds</span></td><td class="n">0<span class="n2">4 ds</span></td><td class="n">0<span class="n2">13 ds</span></td><td class="n">3,952<span class="n2">16 ds</span></td><td class="n">39<span class="n2">5 ds</span></td><td class="n">54,187<span class="n2">509 ds</span></td><td class="n">—<span class="n2">2,243 ds</span></td><td class="n">224,070</td></tr>
         <tr><td>KMAP</td><td class="n">—</td><td class="n">12,913<span class="n2">54 ds</span></td><td class="n">805<span class="n2">5 ds</span></td><td class="n">—</td><td class="n">714<span class="n2">2 ds</span></td><td class="n">10,330<span class="n2">14 ds</span></td><td class="n">—</td><td class="n">205,066</td></tr>
         <tr><td>MassBank</td><td class="n">—</td><td class="n">3,013<span class="n2">114 ds</span></td><td class="n">0<span class="n2">2 ds</span></td><td class="n">—</td><td class="n">—</td><td class="n">4,558<span class="n2">2 ds</span></td><td class="n">—</td><td class="n">46,842</td></tr>
-        <tr class="total"><td>Total</td><td class="n">2,024,048<span class="n2">2,515 ds</span></td><td class="n">53,984<span class="n2">154 ds</span></td><td class="n">6,470<span class="n2">187 ds</span></td><td class="n">136,544<span class="n2">174 ds</span></td><td class="n">14,945<span class="n2">644 ds</span></td><td class="n">687,388<span class="n2">6,211 ds</span></td><td class="n">—<span class="n2">3,476 ds</span></td><td class="n">3,767,958</td></tr>
+        <tr class="total"><td>Total</td><td class="n">1,445,522<span class="n2">2,515 ds</span></td><td class="n">53,844<span class="n2">154 ds</span></td><td class="n">6,470<span class="n2">187 ds</span></td><td class="n">136,544<span class="n2">174 ds</span></td><td class="n">14,845<span class="n2">640 ds</span></td><td class="n">687,562<span class="n2">6,215 ds</span></td><td class="n">—<span class="n2">3,475 ds</span></td><td class="n">3,142,846</td></tr>
       </tbody>
     </table>
   </div>
@@ -940,12 +940,12 @@ Mon 09 Nov, 08:38 CET</title></circle></svg><div class="legend" style="margin-to
 
 <section>
   <h2>How acquisitions reach <code>data-ready</code></h2>
-  <p class="note">Every acquisition converted or symlinked so far — 520,971, including those already delivered.</p>
+  <p class="note">Every acquisition converted or symlinked so far — 520,969, including those already delivered.</p>
   <div class="grid">
     <div class="card"><span class="k">309,311</span><div class="t">Symlinked, already open format</div><div class="foot">no conversion needed</div></div>
     <div class="card"><span class="k">63,390</span><div class="t">ThermoRawFileParser</div><div class="foot">Thermo .raw</div></div>
     <div class="card"><span class="k">64,550</span><div class="t">msconvert</div><div class="foot">Bruker · Agilent · Sciex · Waters</div></div>
-    <div class="card"><span class="k">82,376</span><div class="t">Rust parser</div><div class="foot">Thermo .raw, validated datasets</div></div>
+    <div class="card"><span class="k">82,374</span><div class="t">Rust parser</div><div class="foot">Thermo .raw, validated datasets</div></div>
     <div class="card"><span class="k">1,344</span><div class="t">OpenMS</div><div class="foot">legacy mzData</div></div>
   </div>
 </section>
