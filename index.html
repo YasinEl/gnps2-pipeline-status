@@ -161,12 +161,12 @@
   <p class="lab">Repository → GNPS2 acquisition</p>
   <h1>GNPS2 Corpus Pipeline</h1>
   <p class="sub">Download → unpack → convert → hand off mz(x)ML to WCH → archive the rest → delete locally once confirmed. <strong>3,662,659 files</strong> fetched across 13,559 datasets.</p>
-  <p class="stamp">Snapshot 2026-11-15 16:24 CET · downloads: MassIVE, MetaboLights, Workbench · scratch 654 GiB · conversion: running</p>
+  <p class="stamp">Snapshot 2026-11-15 16:54 CET · downloads: MassIVE, MetaboLights, Workbench · scratch 623 GiB · conversion: running</p>
 </header>
 
 
 
-<section id="last"><h2>Last time each step ran</h2><div class="scroll"><table><thead><tr><th>Step</th><th class="n">When</th><th class="n"></th><th>Last item</th></tr></thead><tbody><tr><td>Checked repositories for new datasets</td><td class="n">2026-11-15 13:30</td><td class="n">3 h ago</td><td>2 new found · runs every 2 days</td></tr><tr><td>Dataset finished downloading</td><td class="n">2026-11-15 15:14</td><td class="n">1 h ago</td><td>MSV000088043</td></tr><tr><td>File converted to mzML</td><td class="n">2026-11-15 16:18</td><td class="n">6 min ago</td><td></td></tr><tr><td>mz(x)ML handed off to WCH</td><td class="n">2026-11-15 15:23</td><td class="n">1 h ago</td><td>metabolights/MTBLS37</td></tr><tr><td>allDone.txt placed</td><td class="n">2026-11-14 13:26</td><td class="n">27 h ago</td><td>massive/MSV000084212</td></tr><tr><td>Vendor/original files archived</td><td class="n">2026-11-15 16:23</td><td class="n">0 min ago</td><td>metabolights/MTBLS9981</td></tr><tr><td>Local copy deleted after archive</td><td class="n">2026-11-15 10:19</td><td class="n">6 h ago</td><td>metabolights/MTBLS9877 · 7 MB</td></tr><tr><td>Daily delete sweep finished</td><td class="n">2026-11-15 13:33</td><td class="n">3 h ago</td><td>runs daily</td></tr></tbody></table></div></section>
+<section id="last"><h2>Last time each step ran</h2><div class="scroll"><table><thead><tr><th>Step</th><th class="n">When</th><th class="n"></th><th>Last item</th></tr></thead><tbody><tr><td>Checked repositories for new datasets</td><td class="n">2026-11-15 13:30</td><td class="n">3 h ago</td><td>2 new found · runs every 2 days</td></tr><tr><td>Dataset finished downloading</td><td class="n">2026-11-15 15:14</td><td class="n">2 h ago</td><td>MSV000088043</td></tr><tr><td>File converted to mzML</td><td class="n">2026-11-15 16:52</td><td class="n">1 min ago</td><td></td></tr><tr><td>mz(x)ML handed off to WCH</td><td class="n">2026-11-15 15:23</td><td class="n">2 h ago</td><td>metabolights/MTBLS37</td></tr><tr><td>allDone.txt placed</td><td class="n">2026-11-14 13:26</td><td class="n">27 h ago</td><td>massive/MSV000084212</td></tr><tr><td>Vendor/original files archived</td><td class="n">2026-11-15 16:53</td><td class="n">1 min ago</td><td>metabolights/MTBLS9981</td></tr><tr><td>Local copy deleted after archive</td><td class="n">2026-11-15 10:19</td><td class="n">7 h ago</td><td>metabolights/MTBLS9877 · 7 MB</td></tr><tr><td>Daily delete sweep finished</td><td class="n">2026-11-15 13:33</td><td class="n">3 h ago</td><td>runs daily</td></tr></tbody></table></div></section>
 
 <section id="flow">
   <h2>Hand-off flow</h2>
@@ -174,8 +174,8 @@
   <div class="grid">
     <div class="card"><span class="k">3,834,187</span><div class="t">files held locally · 32.0 TB</div>
       <div class="foot">10,380 datasets · held until archived and delivered · measured 06:14</div></div>
-    <div class="card"><span class="k">1,342</span><div class="t">files converted, awaiting push · 282.2 GB</div>
-      <div class="foot">in <code>data-ready</code> on scratch across 48 datasets, counted on disk · 13 of them KMAP/MassBank, which WCH does not accept yet (HTTP 400)</div></div>
+    <div class="card"><span class="k">1,343</span><div class="t">files converted, awaiting push · 282.2 GB</div>
+      <div class="foot">in <code>data-ready</code> on scratch across 48 datasets, counted on disk · 14 of them KMAP/MassBank, which WCH does not accept yet (HTTP 400)</div></div>
     <div class="card is-ready"><span class="k">644,645</span><div class="t">files delivered to WCH</div>
       <div class="foot">confirmed on the staging server · 2,959 datasets</div></div>
     <div class="card"><span class="k">298,688</span><div class="t">files reclaimed · 14.94 TiB</div>
@@ -250,7 +250,7 @@
     <div class="card"><span class="t" style="display:block;margin-bottom:6px">Handing off to WCH</span>
       <div class="foot" style="font-size:13px">no file being pushed this minute (the hand-off loop runs without pause and looks for newly staged files every minute)</div></div>
     <div class="card"><span class="t" style="display:block;margin-bottom:6px">Uploading to the archive</span>
-      <div class="foot" style="font-size:13px">metabolights/MTBLS10743 — 1,343 files / 31.6 of 67.3 GiB (47%), 35.7 GiB to go · last file 0 min ago</div></div>
+      <div class="foot" style="font-size:13px">metabolights/MTBLS10743 — 1,657 files / 42.1 of 67.3 GiB (63%), 25.2 GiB to go · last file 0 min ago</div></div>
   </div>
 </section>
 
@@ -671,11 +671,11 @@ Sun 15 Nov, 13:42 CET</title></circle></svg><div class="legend" style="margin-to
   <h2>Archive hand-off <span style="font-weight:400;color:var(--ink-3)">· vendor originals</span></h2>
   <p class="note">Each deposit is pushed to the WCH archive area; its files are deleted here only after the archive confirms them and every conversion has been delivered.</p>
   <div class="grid">
-    <div class="card is-ready"><span class="k">73,095,654</span><div class="t">files archived · 480.42 TB</div>
-      <div class="foot">520,113 datasets · 1503.0% of the 0.0 TB still held locally</div></div>
+    <div class="card is-ready"><span class="k">73,162,987</span><div class="t">files archived · 480.85 TB</div>
+      <div class="foot">520,585 datasets · 1504.3% of the 0.0 TB still held locally</div></div>
     <div class="card"><span class="k">163,725</span><div class="t">vendor acquisitions deleted · 21806.03 GiB</div>
       <div class="foot">removed only after the archive confirmed every file</div></div>
-    <div class="card"><span class="k">90,412</span><div class="t">files held back · 43,745 datasets</div>
+    <div class="card"><span class="k">90,412</span><div class="t">files held back · 43,780 datasets</div>
       <div class="foot">archived, but raws kept — conversion incomplete or failing</div></div>
   </div>
   <div class="meter" style="margin-top:14px">
@@ -688,7 +688,7 @@ Sun 15 Nov, 13:42 CET</title></circle></svg><div class="legend" style="margin-to
   </div>
   <div class="fb-plot">
     <div class="fb-y"><span class="fb-y2"></span><span class="fb-y1"></span><span>0</span></div>
-    <div class="fb-bars"><div class="fb" data-hour="47" data-b="41933025796" data-f="455" data-d="96"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="46" data-b="41406614601" data-f="374" data-d="184"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="45" data-b="15613044897" data-f="1343" data-d="144"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="44" data-b="33993480638" data-f="219" data-d="106"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="43" data-b="10561221751" data-f="158" data-d="207"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="42" data-b="786257" data-f="23" data-d="152"><div class="fb-col"><i></i></div><span class="fb-lab">42</span></div><div class="fb" data-hour="41" data-b="974354628" data-f="218" data-d="94"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="40" data-b="19164521357" data-f="154" data-d="11"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="39" data-b="30440680895" data-f="265" data-d="207"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="38" data-b="25172689735" data-f="223" data-d="165"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="37" data-b="119558" data-f="5" data-d="98"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="36" data-b="4547628590" data-f="76" data-d="8"><div class="fb-col"><i></i></div><span class="fb-lab">36</span></div><div class="fb" data-hour="35" data-b="8485577986" data-f="77" data-d="52"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="34" data-b="36996130016" data-f="113" data-d="161"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="33" data-b="46087249550" data-f="233" data-d="132"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="32" data-b="22729378268" data-f="165" data-d="24"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="31" data-b="23833464805" data-f="178" data-d="572"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="30" data-b="12338475280" data-f="1076" data-d="1427"><div class="fb-col"><i></i></div><span class="fb-lab">30</span></div><div class="fb" data-hour="29" data-b="5617620503" data-f="102" data-d="1896"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="28" data-b="1242681012" data-f="2592" data-d="1289"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="27" data-b="1614335" data-f="69" data-d="1095"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="26" data-b="585653248" data-f="614" data-d="953"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="25" data-b="16921050860" data-f="4600" data-d="1421"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="24" data-b="5802895519" data-f="1822" data-d="7"><div class="fb-col"><i></i></div><span class="fb-lab">24</span></div><div class="fb" data-hour="23" data-b="3731626930" data-f="1081" data-d="839"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="22" data-b="39126896631" data-f="1823" data-d="1515"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="21" data-b="28537884720" data-f="699" data-d="1416"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="20" data-b="59876572804" data-f="2790" data-d="946"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="19" data-b="55036485145" data-f="367" data-d="1416"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="18" data-b="17721989892" data-f="133" data-d="1314"><div class="fb-col"><i></i></div><span class="fb-lab">18</span></div><div class="fb" data-hour="17" data-b="19319913088" data-f="154" data-d="1004"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="16" data-b="9745488668" data-f="178" data-d="1459"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="15" data-b="23811243020" data-f="218" data-d="944"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="14" data-b="19584345626" data-f="214" data-d="944"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="13" data-b="0" data-f="0" data-d="944"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="12" data-b="0" data-f="0" data-d="1408"><div class="fb-col"><i></i></div><span class="fb-lab">12</span></div><div class="fb" data-hour="11" data-b="13617178992" data-f="1950" data-d="952"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="10" data-b="15504340210" data-f="2190" data-d="842"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="9" data-b="23488298087" data-f="5765" data-d="1046"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="8" data-b="30589068993" data-f="3010" data-d="944"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="7" data-b="16258976366" data-f="1321" data-d="1416"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="6" data-b="29176685034" data-f="4011" data-d="945"><div class="fb-col"><i></i></div><span class="fb-lab">6</span></div><div class="fb" data-hour="5" data-b="15560063573" data-f="3023" data-d="1416"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="4" data-b="4359968711" data-f="886" data-d="944"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="3" data-b="5750102955" data-f="2484" data-d="1429"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="2" data-b="19096298945" data-f="1561" data-d="1416"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="1" data-b="18361435481" data-f="789" data-d="1416"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="0" data-b="10724148447" data-f="321" data-d="691"><div class="fb-col"><i></i></div><span class="fb-lab">0</span></div></div>
+    <div class="fb-bars"><div class="fb" data-hour="47" data-b="41933025796" data-f="455" data-d="96"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="46" data-b="41406614601" data-f="374" data-d="184"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="45" data-b="15613044897" data-f="1343" data-d="144"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="44" data-b="33993480638" data-f="219" data-d="106"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="43" data-b="10561221751" data-f="158" data-d="207"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="42" data-b="786257" data-f="23" data-d="152"><div class="fb-col"><i></i></div><span class="fb-lab">42</span></div><div class="fb" data-hour="41" data-b="974354628" data-f="218" data-d="94"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="40" data-b="19164521357" data-f="154" data-d="11"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="39" data-b="30440680895" data-f="265" data-d="207"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="38" data-b="25172689735" data-f="223" data-d="165"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="37" data-b="119558" data-f="5" data-d="98"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="36" data-b="4547628590" data-f="76" data-d="8"><div class="fb-col"><i></i></div><span class="fb-lab">36</span></div><div class="fb" data-hour="35" data-b="8485577986" data-f="77" data-d="52"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="34" data-b="36996130016" data-f="113" data-d="161"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="33" data-b="46087249550" data-f="233" data-d="132"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="32" data-b="22729378268" data-f="165" data-d="24"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="31" data-b="23833464805" data-f="178" data-d="572"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="30" data-b="12338475280" data-f="1076" data-d="1427"><div class="fb-col"><i></i></div><span class="fb-lab">30</span></div><div class="fb" data-hour="29" data-b="5617620503" data-f="102" data-d="1896"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="28" data-b="1242681012" data-f="2592" data-d="1289"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="27" data-b="1614335" data-f="69" data-d="1095"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="26" data-b="585653248" data-f="614" data-d="953"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="25" data-b="16921050860" data-f="4600" data-d="1421"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="24" data-b="5802895519" data-f="1822" data-d="7"><div class="fb-col"><i></i></div><span class="fb-lab">24</span></div><div class="fb" data-hour="23" data-b="3731626930" data-f="1081" data-d="839"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="22" data-b="39126896631" data-f="1823" data-d="1515"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="21" data-b="28537884720" data-f="699" data-d="1416"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="20" data-b="59876572804" data-f="2790" data-d="946"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="19" data-b="55036485145" data-f="367" data-d="1416"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="18" data-b="17721989892" data-f="133" data-d="1314"><div class="fb-col"><i></i></div><span class="fb-lab">18</span></div><div class="fb" data-hour="17" data-b="19319913088" data-f="154" data-d="1004"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="16" data-b="9745488668" data-f="178" data-d="1459"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="15" data-b="23811243020" data-f="218" data-d="944"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="14" data-b="19584345626" data-f="214" data-d="944"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="13" data-b="0" data-f="0" data-d="944"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="12" data-b="0" data-f="0" data-d="1408"><div class="fb-col"><i></i></div><span class="fb-lab">12</span></div><div class="fb" data-hour="11" data-b="13617178992" data-f="1950" data-d="952"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="10" data-b="15504340210" data-f="2190" data-d="842"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="9" data-b="23488298087" data-f="5765" data-d="1046"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="8" data-b="30589068993" data-f="3010" data-d="944"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="7" data-b="16258976366" data-f="1321" data-d="1416"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="6" data-b="29176685034" data-f="4011" data-d="945"><div class="fb-col"><i></i></div><span class="fb-lab">6</span></div><div class="fb" data-hour="5" data-b="15560063573" data-f="3023" data-d="1416"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="4" data-b="4359968711" data-f="886" data-d="944"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="3" data-b="5750102955" data-f="2484" data-d="1429"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="2" data-b="19096298945" data-f="1561" data-d="1416"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="1" data-b="18361435481" data-f="789" data-d="1416"><div class="fb-col"><i></i></div><span class="fb-lab"></span></div><div class="fb" data-hour="0" data-b="21732132166" data-f="634" data-d="1163"><div class="fb-col"><i></i></div><span class="fb-lab">0</span></div></div>
   </div>
   <p class="fb-unit"></p>
 </div>
@@ -731,8 +731,8 @@ Sun 15 Nov, 13:42 CET</title></circle></svg><div class="legend" style="margin-to
 })();
 </script>
     <div class="legend">
-      <span><b>50,122 files</b> sent over the last 48 hours</span>
-      <span><b>822.8 GiB</b> · 38,107 datasets completed</span>
+      <span><b>50,435 files</b> sent over the last 48 hours</span>
+      <span><b>833.0 GiB</b> · 38,579 datasets completed</span>
       <span class="dim">hourly buckets, newest at the right · the 0 bucket is still filling</span>
     </div>
   </div>
@@ -745,35 +745,35 @@ Sun 15 Nov, 13:42 CET</title></circle></svg><div class="legend" style="margin-to
   <div class="vol">
     <p class="lab">Botnet pool · <code>data-download</code> · 27,215 GiB total</p>
     <div class="track">
-      <div class="used" style="width:42.1%"></div>
+      <div class="used" style="width:42.2%"></div>
       <div class="floor" style="width:18.8%"></div>
-      <div class="avail" style="width:39.1%"></div>
+      <div class="avail" style="width:39.0%"></div>
     </div>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--ink-3)"></span><b>11,466 GiB</b> used</span>
+      <span><span class="swatch" style="background:var(--ink-3)"></span><b>11,475 GiB</b> used</span>
       <span><span class="swatch" style="background:var(--blocked)"></span><b>5,120 GiB</b> reserved floor</span>
-      <span><span class="swatch" style="background:var(--accent)"></span><b>10,630 GiB</b> above the floor (no new downloads here)</span>
+      <span><span class="swatch" style="background:var(--accent)"></span><b>10,621 GiB</b> above the floor (no new downloads here)</span>
     </div>
   </div>
 
   <div class="vol">
     <p class="lab">gscratch · downloads in transit + <code>data-ready</code> · 31,520 GiB total, shared</p>
     <div class="track">
-      <div class="used" style="width:97.9%"></div>
+      <div class="used" style="width:98.0%"></div>
       <div class="floor" style="width:0.1%"></div>
-      <div class="avail" style="width:2.0%"></div>
+      <div class="avail" style="width:1.9%"></div>
     </div>
     <div class="legend">
-      <span><span class="swatch" style="background:var(--ink-3)"></span><b>30,866 GiB</b> used — mostly other people's data</span>
+      <span><span class="swatch" style="background:var(--ink-3)"></span><b>30,898 GiB</b> used — mostly other people's data</span>
       <span><span class="swatch" style="background:var(--blocked)"></span><b>20 GiB</b> conversion floor + reserve</span>
-      <span><span class="swatch" style="background:var(--accent)"></span><b>634 GiB</b> conversion may still use</span>
+      <span><span class="swatch" style="background:var(--accent)"></span><b>603 GiB</b> conversion may still use</span>
     </div>
   </div>
 </section>
 
 <section>
   <h2>The five stages</h2>
-  <p class="note">2,881,070 files across 13,559 datasets; bars are each stage’s share of files.</p>
+  <p class="note">2,881,071 files across 13,559 datasets; bars are each stage’s share of files.</p>
 
   <div class="stage is-idle">
     <span class="step">1</span>
@@ -827,7 +827,7 @@ Sun 15 Nov, 13:42 CET</title></circle></svg><div class="legend" style="margin-to
       <p class="stage-desc">In <code>data-ready</code>, waiting for the next hand-off pass (every 20 minutes).</p>
       <div class="bar"><i style="width:0.0%"></i></div>
     </div>
-    <div class="count"><span class="k">1,342</span><span class="of">files awaiting push · 0.0% of files</span></div>
+    <div class="count"><span class="k">1,343</span><span class="of">files awaiting push · 0.0% of files</span></div>
     <div class="count sec"><span class="k">48</span><span class="of">datasets · 0.4%</span></div>
   </div>
 
@@ -860,7 +860,7 @@ Sun 15 Nov, 13:42 CET</title></circle></svg><div class="legend" style="margin-to
         <tr><td>Everything else <span class="dim">· 481 delivered earlier</span></td><td class="n">462,737<span class="n2">818 ds</span></td><td class="n">8<span class="n2">3 ds</span></td><td class="n">751<span class="n2">18 ds</span></td><td class="n">13,195<span class="n2">37 ds</span></td><td class="n">0<span class="n2">58 ds</span></td><td class="n">3,309<span class="n2">18 ds</span></td><td class="n">—<span class="n2">264 ds</span></td><td class="n">480,000<span class="n2">1,216 ds</span></td></tr>
         <tr><td>Zip-only, spectral inside</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—<span class="n2">1 ds</span></td><td class="n">0<span class="n2">1 ds</span></td></tr>
         <tr><td>Staged by earlier work</td><td class="n">0<span class="n2">13 ds</span></td><td class="n">0<span class="n2">3 ds</span></td><td class="n">347<span class="n2">6 ds</span></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">347<span class="n2">22 ds</span></td></tr>
-        <tr class="total"><td>Total</td><td class="n">1,875,832<span class="n2">3,064 ds</span></td><td class="n">1,342<span class="n2">48 ds</span></td><td class="n">1,624<span class="n2">188 ds</span></td><td class="n">171,047<span class="n2">185 ds</span></td><td class="n">51,152<span class="n2">841 ds</span></td><td class="n">780,073<span class="n2">6,042 ds</span></td><td class="n">—<span class="n2">3,145 ds</span></td><td class="n">2,880,012<span class="n2">13,559 ds</span></td></tr>
+        <tr class="total"><td>Total</td><td class="n">1,875,832<span class="n2">3,064 ds</span></td><td class="n">1,343<span class="n2">48 ds</span></td><td class="n">1,624<span class="n2">188 ds</span></td><td class="n">171,047<span class="n2">185 ds</span></td><td class="n">51,152<span class="n2">841 ds</span></td><td class="n">780,073<span class="n2">6,042 ds</span></td><td class="n">—<span class="n2">3,145 ds</span></td><td class="n">2,880,012<span class="n2">13,559 ds</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -878,7 +878,7 @@ Sun 15 Nov, 13:42 CET</title></circle></svg><div class="legend" style="margin-to
         <tr><td>MetaboLights</td><td class="n">91,027<span class="n2">508 ds</span></td><td class="n">0<span class="n2">3 ds</span></td><td class="n">0<span class="n2">13 ds</span></td><td class="n">11,951<span class="n2">15 ds</span></td><td class="n">47<span class="n2">6 ds</span></td><td class="n">57,216<span class="n2">511 ds</span></td><td class="n">—<span class="n2">2,242 ds</span></td><td class="n">206,801</td></tr>
         <tr><td>KMAP</td><td class="n">211,425<span class="n2">60 ds</span></td><td class="n">—</td><td class="n">0<span class="n2">1 ds</span></td><td class="n">—</td><td class="n">433<span class="n2">1 ds</span></td><td class="n">10,090<span class="n2">13 ds</span></td><td class="n">—</td><td class="n">223,376</td></tr>
         <tr><td>MassBank</td><td class="n">41,933<span class="n2">117 ds</span></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">4,558<span class="n2">2 ds</span></td><td class="n">—</td><td class="n">46,491</td></tr>
-        <tr class="total"><td>Total</td><td class="n">1,875,832<span class="n2">3,064 ds</span></td><td class="n">1,342<span class="n2">48 ds</span></td><td class="n">1,624<span class="n2">188 ds</span></td><td class="n">171,047<span class="n2">185 ds</span></td><td class="n">51,152<span class="n2">841 ds</span></td><td class="n">780,073<span class="n2">6,042 ds</span></td><td class="n">—<span class="n2">3,145 ds</span></td><td class="n">3,662,659</td></tr>
+        <tr class="total"><td>Total</td><td class="n">1,875,832<span class="n2">3,064 ds</span></td><td class="n">1,343<span class="n2">48 ds</span></td><td class="n">1,624<span class="n2">188 ds</span></td><td class="n">171,047<span class="n2">185 ds</span></td><td class="n">51,152<span class="n2">841 ds</span></td><td class="n">780,073<span class="n2">6,042 ds</span></td><td class="n">—<span class="n2">3,145 ds</span></td><td class="n">3,662,659</td></tr>
       </tbody>
     </table>
   </div>
@@ -898,14 +898,14 @@ Sun 15 Nov, 13:42 CET</title></circle></svg><div class="legend" style="margin-to
 
 <section>
   <h2>Conversion queue</h2>
-  <p class="note">128 datasets waiting, worked top to bottom; datasets on gscratch first (128).</p>
+  <p class="note">130 datasets waiting, worked top to bottom; datasets on gscratch first (130).</p>
   <div class="scroll">
     <table>
       <thead><tr><th>Group</th><th class="n">Datasets</th><th class="n">Vendor files to convert</th></tr></thead>
       <tbody>
         <tr><td>Environmental (ReDU)</td><td class="n">1</td><td class="n">114</td></tr>
-        <tr><td>Other ReDU-described</td><td class="n">20</td><td class="n">537</td></tr>
-        <tr><td>Not in ReDU</td><td class="n">106</td><td class="n">7,103</td></tr>
+        <tr><td>Other ReDU-described</td><td class="n">22</td><td class="n">718</td></tr>
+        <tr><td>Not in ReDU</td><td class="n">106</td><td class="n">7,587</td></tr>
         <tr><td>MALDI imaging (last)</td><td class="n">1</td><td class="n">4</td></tr>
       </tbody>
     </table>
